@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Principe — Enterprise Data & AI Transformation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --black:   #0D1117;
+  --black2:  #131A22;
+  --black3:  #1A2230;
+  --teal:    #00C8A8;
+  --teal2:   #00A88C;
+  --teal-dim: rgba(0,200,168,0.10);
+  --teal-border: rgba(0,200,168,0.22);
+  --off-white: #EDF0F0;
+  --gray:    #8892A4;
+  --gray2:   #5A6478;
+  --line:    rgba(255,255,255,0.06);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'IBM Plex Sans', sans-serif; background: var(--black); color: var(--off-white); -webkit-font-smoothing: antialiased; }
+
+.hero { padding: 80px 80px 72px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; top: -140px; right: -140px; width: 640px; height: 640px; background: radial-gradient(circle, rgba(0,200,168,0.055) 0%, transparent 65%); pointer-events: none; }
+.hero-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
+.hero-name { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 500; line-height: 0.95; letter-spacing: -1.5px; color: var(--off-white); }
+.hero-name span { color: var(--teal); }
+.hero-eyebrow { font-size: 11px; font-weight: 300; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gray); margin-top: 18px; line-height: 2; }
+.hero-pills { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 8px; flex-shrink: 0; }
+.pill { font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); border: 1px solid var(--teal-border); background: var(--teal-dim); padding: 6px 14px; border-radius: 2px; }
+.hero-quote { margin-top: 44px; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; font-style: italic; color: rgba(237,240,240,0.55); line-height: 1.6; max-width: 580px; padding-left: 24px; border-left: 2px solid var(--teal); }
+.hero-rule { height: 1px; background: var(--line); margin: 52px 0 44px; }
+.stats-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.stat { background: var(--black2); padding: 30px 36px; transition: background 0.2s; }
+.stat:hover { background: var(--black3); }
+.stat-n { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 500; color: var(--teal); line-height: 1; letter-spacing: -1px; }
+.stat-l { font-size: 11px; font-weight: 300; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); margin-top: 8px; line-height: 1.6; }
+
+.sec { padding: 80px 80px; border-bottom: 1px solid var(--line); }
+.sec-alt { background: #111820; }
+.tag { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: block; }
+.h2 { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 500; line-height: 1.1; color: var(--off-white); margin-bottom: 18px; }
+.sub { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 1.75; max-width: 580px; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 52px; }
+.card-d { background: var(--black2); border: 1px solid var(--line); border-radius: 3px; padding: 36px; }
+.card-t { background: var(--teal-dim); border: 1px solid var(--teal-border); border-radius: 3px; padding: 36px; }
+.card-d h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--off-white); margin-bottom: 14px; }
+.card-t h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--teal); margin-bottom: 14px; }
+.card-d p, .card-t p { font-size: 14px; font-weight: 300; line-height: 1.8; }
+.card-d p { color: var(--gray); }
+.card-t p { color: rgba(237,240,240,0.6); }
+
+.wins { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; margin-top: 52px; }
+.win { background: var(--black2); padding: 34px 36px; transition: background 0.2s; }
+.win:hover { background: var(--black3); }
+.win-co { font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gray2); margin-bottom: 12px; display: block; }
+.win-n { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: var(--teal); line-height: 1; margin-bottom: 12px; }
+.win-d { font-size: 13px; font-weight: 300; color: var(--gray); line-height: 1.7; }
+
+.aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; }
+.aud-card { background: var(--black2); border: 1px solid var(--line); border-top: 2px solid var(--teal); border-radius: 3px; padding: 32px 28px; }
+.aud-role { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--off-white); margin-bottom: 12px; }
+.aud-d { font-size: 13px; font-weight: 300; color: var(--gray); line-height: 1.7; }
+
+.articles { margin-top: 52px; display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.article { background: var(--black2); padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: background 0.15s; }
+.article:hover { background: var(--black3); }
+.art-title { font-size: 14px; font-weight: 400; color: var(--off-white); line-height: 1.45; }
+.art-tag { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); white-space: nowrap; flex-shrink: 0; }
+
+.cta { background: var(--black2); padding: 96px 80px; text-align: center; position: relative; overflow: hidden; border-bottom: none; }
+.cta::before { content: ''; position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(0,200,168,0.07) 0%, transparent 65%); pointer-events: none; }
+.cta-ey { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--gray2); margin-bottom: 18px; }
+.cta-h { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 500; line-height: 1.1; color: var(--off-white); margin-bottom: 18px; }
+.cta-h em { color: var(--teal); font-style: italic; }
+.cta-s { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 1.75; margin: 0 auto 44px; max-width: 460px; }
+.cta-btn { display: inline-block; background: var(--teal); color: var(--black); font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; padding: 18px 52px; border-radius: 2px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+.cta-btn:hover { background: #33D4B9; transform: translateY(-2px); }
+.cta-note { margin-top: 18px; font-size: 11px; color: var(--gray2); letter-spacing: 1px; }
+
+footer { background: var(--black); border-top: 1px solid var(--line); padding: 28px 80px; display: flex; align-items: center; justify-content: space-between; }
+.f-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--gray2); }
+.f-info { font-size: 11px; color: var(--gray2); letter-spacing: 0.5px; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.hero-name    { animation: fadeUp 0.55s ease both; }
+.hero-eyebrow { animation: fadeUp 0.55s 0.08s ease both; }
+.hero-quote   { animation: fadeUp 0.55s 0.16s ease both; }
+.stats-bar    { animation: fadeUp 0.55s 0.24s ease both; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-row">
+    <div>
+      <h1 class="hero-name">Michael<br><span>Principe</span></h1>
+      <p class="hero-eyebrow">Enterprise Data Strategy · AI Transformation<br>Healthcare · Financial Services · Manufacturing</p>
+    </div>
+    <div class="hero-pills">
+      <span class="pill">15+ Years</span>
+      <span class="pill">Regulated Industries</span>
+      <span class="pill">C-Suite Advisor</span>
+    </div>
+  </div>
+  <blockquote class="hero-quote">
+    Most organizations don't have a data problem.<br>They have a trust problem — and building trust is where I excel.
+  </blockquote>
+  <div class="hero-rule"></div>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-n">$30M+</div><div class="stat-l">Data &amp; Analytics<br>Portfolio Value</div></div>
+    <div class="stat"><div class="stat-n">85</div><div class="stat-l">Global Delivery<br>Org Scaled</div></div>
+    <div class="stat"><div class="stat-n">80%</div><div class="stat-l">Reduction in<br>Manual Processes</div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="tag">The Problem</span>
+  <h2 class="h2">Your AI ambitions are built<br>on an unstable foundation.</h2>
+  <p class="sub">Fragmented systems. Weak governance. Leadership misalignment. Most enterprise data and AI initiatives fail before they start — not from lack of technology, but from lack of trust in the data itself.</p>
+  <div class="two-col">
+    <div class="card-d">
+      <h3>What you're dealing with</h3>
+      <p>Siloed legacy systems that don't connect. Manual reporting consuming your best analysts. AI initiatives stalling because nobody trusts the underlying data. A growing gap between what your board expects and what your team can actually deliver.</p>
+    </div>
+    <div class="card-t">
+      <h3>What I do about it</h3>
+      <p>I work at the intersection of executive strategy and delivery execution. I define the roadmap with your leadership, align governance and architecture to your outcomes, then build the delivery model that makes it real — and sustainable long after the engagement ends.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <span class="tag">Proven Results</span>
+  <h2 class="h2">Real numbers.<br>Real outcomes.</h2>
+  <div class="wins">
+    <div class="win">
+      <span class="win-co">Cigna / Express Scripts</span>
+      <div class="win-n">$150K → $30M</div>
+      <div class="win-d">Scaled a 5-person advisory into a $30M+ analytics platform for pharmaceutical manufacturers. Grew the delivery org to 85 global resources, reaching an $8M run rate and $24M multi-year agreement.</div>
+    </div>
+    <div class="win">
+      <span class="win-co">Novant Health</span>
+      <div class="win-n">~$5M</div>
+      <div class="win-d">Reduced annual claims denial exposure by stabilizing a provider MDM program with a 13.4% cross-system mismatch. Full ROI achieved within 6 months of go-live.</div>
+    </div>
+    <div class="win">
+      <span class="win-co">Catalyst Credit Union</span>
+      <div class="win-n">$300K</div>
+      <div class="win-d">Recaptured annual labor capacity by replacing manual reporting with Microsoft Fabric. Expanded SME portfolio coverage from 20 to 30 in a 20-week engagement.</div>
+    </div>
+    <div class="win">
+      <span class="win-co">Machinify (Post-Merger)</span>
+      <div class="win-n">3 → 1</div>
+      <div class="win-d">Unified three inherited data operating models into a single framework and 24-month roadmap for a $500M+ healthcare payment integrity platform. Extended to AI-ready architecture layers.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="tag">Who I Work With</span>
+  <h2 class="h2">Built for leaders who need<br>strategy and execution.</h2>
+  <p class="sub">I work with senior executives in regulated industries who need someone who can run a boardroom alignment session in the morning and a technical architecture review in the afternoon.</p>
+  <div class="aud-grid">
+    <div class="aud-card">
+      <div class="aud-role">CIO / CTO</div>
+      <div class="aud-d">You need data and AI that works at enterprise scale — governed, trusted, and built to last beyond the next initiative cycle.</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-role">CDO / VP Data</div>
+      <div class="aud-d">You're being asked to deliver AI-ready foundations while managing legacy debt, fragmented sources, and a team under constant pressure.</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-role">CEO / COO</div>
+      <div class="aud-d">You've invested in data platforms that aren't producing outcomes. You need someone who aligns people, process, and technology around the same goal.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <span class="tag">Thought Leadership</span>
+  <h2 class="h2">Writing for the leaders<br>navigating this now.</h2>
+  <div class="articles">
+    <div class="article"><div class="art-title">10 Top Problems Facing CIOs &amp; CDOs in 2025 — and How Leading Organizations Are Solving Them</div><div class="art-tag">Strategy</div></div>
+    <div class="article"><div class="art-title">AI-Ready Data Doesn't Exist Yet: What to Fix Before Your GenAI Initiative</div><div class="art-tag">AI Readiness</div></div>
+    <div class="article"><div class="art-title">7 Questions Every Leader Must Answer Before You Even Talk About AI</div><div class="art-tag">Governance</div></div>
+    <div class="article"><div class="art-title">When AI Starts Designing Data: How Agentic Systems Turn Strategy Into Architecture</div><div class="art-tag">Agentic AI</div></div>
+    <div class="article"><div class="art-title">When Data Starts to Describe Itself: The First Step Toward Agentic Data Systems</div><div class="art-tag">Data Automation</div></div>
+  </div>
+</section>
+
+<section class="sec cta">
+  <p class="cta-ey">Ready to Build</p>
+  <h2 class="cta-h">Let's talk about what<br>your data could <em>actually do.</em></h2>
+  <p class="cta-s">A 30-minute strategy call. No pitch, no pressure. Just an honest conversation about where your data and AI foundation stands — and what it would take to move it forward.</p>
+  <a href="BOOKING_LINK_HERE" class="cta-btn">Book a Strategy Call</a>
+  <p class="cta-note">30 minutes · No commitment</p>
+</section>
+
+<footer>
+  <div class="f-name">Michael Principe</div>
+  <div class="f-info">mhprincipe@gmail.com &nbsp;·&nbsp; Grosse Pointe, MI &nbsp;·&nbsp; linkedin.com/in/michaelhprincipe</div>
+</footer>
+
+</body>
+</html>
