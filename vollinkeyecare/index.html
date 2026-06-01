@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vollink Eyecare | Hudsonville & Grand Haven, MI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0B5563;
+  --teal-dark: #073D4A;
+  --teal-mid: #0E7080;
+  --teal-light: #C8E8EE;
+  --teal-pale: #EDF6F8;
+  --white: #FFFFFF;
+  --off-white: #F5F9FA;
+  --text: #1A2E33;
+  --muted: #5E7E85;
+  --border: #D0E7EC;
+  --gold: #C9A84C;
+  --pad: 72px;
+  --pad-mobile: 20px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: var(--teal-dark);
+  padding: 0 var(--pad);
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  color: var(--white); letter-spacing: 0.02em; white-space: nowrap;
+}
+.nav-logo span { color: var(--teal-light); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 13px; color: rgba(255,255,255,0.8); letter-spacing: 0.04em; transition: color 0.2s; white-space: nowrap; }
+.nav-links a:hover { color: var(--white); }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-phones { display: flex; flex-direction: column; gap: 2px; }
+.nav-phone { font-size: 11px; color: rgba(255,255,255,0.7); white-space: nowrap; }
+.nav-phone strong { color: var(--teal-light); font-weight: 500; }
+.nav-cta {
+  background: var(--gold); color: var(--white);
+  padding: 10px 20px; border-radius: 3px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  white-space: nowrap; transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.9; }
+.nav-mobile-cta { display: none; }
+
+/* ── HERO ── */
+.hero {
+  padding-top: 70px;
+  min-height: 100vh;
+  background: var(--teal-dark);
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+.hero-left {
+  padding: 80px 48px 80px var(--pad);
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal-light);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--teal-light); }
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px; font-weight: 500; line-height: 1.1;
+  color: var(--white); margin-bottom: 24px;
+}
+.hero-h1 em { font-style: italic; color: var(--teal-light); }
+.hero-sub {
+  font-size: 16px; font-weight: 300; line-height: 1.7;
+  color: rgba(255,255,255,0.7); max-width: 420px; margin-bottom: 40px;
+}
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: var(--white);
+  padding: 14px 30px; border-radius: 3px;
+  font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+  transition: opacity 0.2s; white-space: nowrap;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-ghost {
+  color: rgba(255,255,255,0.8); font-size: 14px;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s; white-space: nowrap;
+}
+.btn-ghost:hover { color: var(--white); }
+.btn-ghost::after { content: '→'; }
+
+/* hero right — decorative panel */
+.hero-right { position: relative; overflow: hidden; min-height: 400px; }
+.hero-img-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--teal-mid) 0%, var(--teal-dark) 100%);
+  opacity: 0.6;
+}
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 30% 50%, rgba(200,232,238,0.08) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(200,232,238,0.06) 0%, transparent 40%);
+}
+.hero-circle-wrap {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%);
+}
+.circle-outer {
+  width: 260px; height: 260px; border-radius: 50%;
+  border: 1px solid rgba(200,232,238,0.2);
+  display: flex; align-items: center; justify-content: center;
+}
+.circle-mid {
+  width: 195px; height: 195px; border-radius: 50%;
+  border: 1px solid rgba(200,232,238,0.3);
+  display: flex; align-items: center; justify-content: center;
+}
+.circle-inner {
+  width: 130px; height: 130px; border-radius: 50%;
+  background: rgba(200,232,238,0.08);
+  border: 1px solid rgba(200,232,238,0.4);
+  display: flex; align-items: center; justify-content: center;
+}
+.eye-svg { width: 50px; height: 50px; opacity: 0.6; }
+.hero-card {
+  position: absolute; bottom: 80px; left: 20px;
+  background: var(--white); border-radius: 6px;
+  padding: 18px 22px; min-width: 200px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3); z-index: 2;
+}
+.hero-card-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.hero-card-stat { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: var(--teal-dark); line-height: 1; }
+.hero-card-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: flex;
+  background: rgba(7,61,74,0.92);
+  border-top: 1px solid rgba(200,232,238,0.1);
+}
+.hero-stat { flex: 1; padding: 18px 20px; border-right: 1px solid rgba(200,232,238,0.1); }
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--white); }
+.hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+/* ── LOCATIONS BAR ── */
+.locations-bar {
+  background: var(--teal-mid);
+  padding: 18px var(--pad);
+  display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+}
+.loc-item { display: flex; align-items: center; gap: 12px; }
+.loc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-light); flex-shrink: 0; }
+.loc-name { font-size: 13px; font-weight: 500; color: var(--white); }
+.loc-phone { font-size: 12px; color: rgba(255,255,255,0.65); }
+.loc-divider { width: 1px; height: 30px; background: rgba(255,255,255,0.15); }
+.loc-btn { margin-left: auto; }
+
+/* ── SHARED SECTION STYLES ── */
+.section-eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal-mid);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--teal-mid); }
+.section-eyebrow.light { color: var(--teal-light); }
+.section-eyebrow.light::before { background: var(--teal-light); }
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px; font-weight: 500; line-height: 1.15;
+  color: var(--teal-dark);
+}
+.section-h2.light { color: var(--white); }
+
+/* ── SERVICES ── */
+.services { padding: 90px var(--pad); background: var(--off-white); }
+.services .section-h2 { max-width: 480px; margin-bottom: 52px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.service-card {
+  background: var(--white); padding: 36px 32px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(11,85,99,0.1); }
+.service-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; color: var(--teal-light); line-height: 1; margin-bottom: 18px; }
+.service-name { font-size: 15px; font-weight: 500; color: var(--teal-dark); margin-bottom: 10px; }
+.service-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── ABOUT ── */
+.about { display: grid; grid-template-columns: 1fr 1fr; }
+.about-left { background: var(--teal-dark); padding: 90px var(--pad); display: flex; flex-direction: column; justify-content: center; }
+.about-left .section-h2 { max-width: 400px; margin-bottom: 20px; }
+.about-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.7); max-width: 420px; margin-bottom: 36px; }
+.about-credentials { display: flex; gap: 32px; }
+.cred-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: var(--teal-light); }
+.cred-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.about-right { padding: 90px var(--pad); background: var(--teal-pale); display: flex; flex-direction: column; justify-content: center; }
+.testimonial { border-left: 2px solid var(--teal-mid); padding-left: 22px; margin-bottom: 36px; }
+.testimonial-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--teal-dark); margin-bottom: 12px; }
+.testimonial-author { font-size: 13px; color: var(--muted); }
+
+/* ── BOOKING ── */
+.booking {
+  background: var(--teal-mid); padding: 90px var(--pad);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+}
+.booking-left .section-h2 { margin-bottom: 14px; }
+.booking-sub { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+.booking-form { background: var(--white); border-radius: 6px; padding: 36px; display: flex; flex-direction: column; gap: 14px; }
+.form-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--teal-dark); }
+.form-subtitle { font-size: 12px; color: var(--muted); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-field { display: flex; flex-direction: column; gap: 5px; }
+.form-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.form-input, .form-select {
+  width: 100%; padding: 11px 14px;
+  border: 1px solid var(--border); border-radius: 3px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text);
+  background: var(--off-white); appearance: none;
+}
+.form-input:focus, .form-select:focus { outline: 2px solid var(--teal-mid); outline-offset: -1px; }
+.form-submit {
+  width: 100%; padding: 14px;
+  background: var(--teal-dark); color: var(--white); border: none; border-radius: 3px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+  cursor: pointer; transition: opacity 0.2s; margin-top: 4px;
+}
+.form-submit:hover { opacity: 0.88; }
+.form-note { font-size: 11px; color: var(--muted); text-align: center; }
+
+/* ── HOURS ── */
+.hours { background: var(--off-white); padding: 80px var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.hours-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 36px; }
+.hours-location { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--teal-dark); margin-bottom: 6px; }
+.hours-address { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.hours-phone { font-size: 13px; color: var(--teal-mid); font-weight: 500; margin-bottom: 24px; }
+.hours-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.hours-row:last-child { border-bottom: none; }
+.hours-day { color: var(--muted); }
+.hours-time { color: var(--text); }
+.hours-time.closed { color: var(--muted); }
+
+/* ── FOOTER ── */
+footer { background: var(--teal-dark); padding: 56px var(--pad) 36px; }
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(200,232,238,0.1); margin-bottom: 28px;
+}
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+.footer-logo span { color: var(--teal-light); }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 260px; }
+.footer-col-title { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.3); flex-wrap: wrap; gap: 8px; }
+
+/* ════════════════════════════════════
+   TABLET — max 1024px
+════════════════════════════════════ */
+@media (max-width: 1024px) {
+  :root { --pad: 40px; }
+  .nav-links { display: none; }
+  .nav-phones { display: none; }
+  .hero-h1 { font-size: 52px; }
+  .section-h2 { font-size: 38px; }
+  .hero-card { left: 10px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .booking { gap: 48px; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-top > div:first-child { grid-column: 1 / -1; }
+}
+
+/* ════════════════════════════════════
+   MOBILE — max 768px
+════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root { --pad: var(--pad-mobile); }
+
+  /* nav */
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-phones { display: none; }
+  .nav-right { gap: 12px; }
+  .nav-cta { display: none; }
+  .nav-mobile-cta {
+    display: block;
+    background: var(--gold); color: var(--white);
+    padding: 8px 14px; border-radius: 3px;
+    font-size: 12px; font-weight: 500; white-space: nowrap;
+  }
+
+  /* hero — stack vertically */
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 52px 20px 44px; }
+  .hero-h1 { font-size: 42px; }
+  .hero-sub { font-size: 15px; max-width: 100%; }
+  .hero-right { display: none; }
+
+  /* hero stats below left col instead */
+  .hero-stats-mobile {
+    display: flex; background: rgba(7,61,74,0.97);
+    border-top: 1px solid rgba(200,232,238,0.1);
+  }
+  .hero-stat-m { flex: 1; padding: 16px 12px; border-right: 1px solid rgba(200,232,238,0.1); text-align: center; }
+  .hero-stat-m:last-child { border-right: none; }
+  .hero-stat-m-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--white); }
+  .hero-stat-m-label { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+  /* locations bar */
+  .locations-bar { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .loc-divider { display: none; }
+  .loc-btn { margin-left: 0; }
+
+  /* services */
+  .services { padding: 64px 20px; }
+  .services-grid { grid-template-columns: 1fr; gap: 1px; }
+  .section-h2 { font-size: 34px; }
+
+  /* about */
+  .about { grid-template-columns: 1fr; }
+  .about-left { padding: 64px 20px; }
+  .about-right { padding: 48px 20px; }
+  .about-credentials { gap: 24px; }
+
+  /* booking */
+  .booking { grid-template-columns: 1fr; padding: 64px 20px; gap: 36px; }
+  .form-row { grid-template-columns: 1fr; }
+  .booking-form { padding: 24px 20px; }
+
+  /* hours */
+  .hours { grid-template-columns: 1fr; padding: 56px 20px; gap: 20px; }
+
+  /* footer */
+  footer { padding: 48px 20px 32px; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-top > div:first-child { grid-column: auto; }
+  .footer-desc { max-width: 100%; }
+  .footer-bottom { flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Vollink <span>Eyecare</span></div>
+  <div class="nav-links">
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Frames</a>
+    <a href="#">Locations</a>
+    <a href="#">Patient Forms</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-phones">
+      <div class="nav-phone"><strong>Hudsonville</strong> (616) 538-0150</div>
+      <div class="nav-phone"><strong>Grand Haven</strong> (616) 842-5820</div>
+    </div>
+    <a href="#" class="nav-cta">Book Appointment</a>
+    <a href="#" class="nav-mobile-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Hudsonville &amp; Grand Haven, MI</div>
+    <h1 class="hero-h1">Your vision,<br><em>expertly</em><br>cared for.</h1>
+    <p class="hero-sub">Dr. Michael Vollink has served West Michigan families for over 20 years. Comprehensive eye exams, contacts, glasses, and more — at two convenient locations.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Book Your Exam</a>
+      <a href="#" class="btn-ghost">Meet Dr. Vollink</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-circle-wrap">
+      <div class="circle-outer">
+        <div class="circle-mid">
+          <div class="circle-inner">
+            <svg class="eye-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="26" cy="26" rx="22" ry="14" stroke="#C8E8EE" stroke-width="1.5"/>
+              <circle cx="26" cy="26" r="7" stroke="#C8E8EE" stroke-width="1.5"/>
+              <circle cx="26" cy="26" r="3" fill="#C8E8EE" opacity="0.6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Years in practice</div>
+      <div class="hero-card-stat">20+</div>
+      <div class="hero-card-sub">Serving West Michigan families</div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">2</div>
+        <div class="hero-stat-label">Locations</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">Same-day</div>
+        <div class="hero-stat-label">Emergency visits</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">Most</div>
+        <div class="hero-stat-label">Insurance accepted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE STATS (shown only on mobile since hero-right is hidden) -->
+<div class="hero-stats-mobile" style="display:none;">
+  <div class="hero-stat-m"><div class="hero-stat-m-num">2</div><div class="hero-stat-m-label">Locations</div></div>
+  <div class="hero-stat-m"><div class="hero-stat-m-num">20+</div><div class="hero-stat-m-label">Years practice</div></div>
+  <div class="hero-stat-m"><div class="hero-stat-m-num">Same-day</div><div class="hero-stat-m-label">Emergency care</div></div>
+</div>
+<script>
+  if(window.innerWidth <= 768) {
+    document.querySelector('.hero-stats-mobile').style.display = 'flex';
+  }
+</script>
+
+<!-- LOCATIONS BAR -->
+<div class="locations-bar">
+  <div class="loc-item">
+    <div class="loc-dot"></div>
+    <div>
+      <div class="loc-name">Hudsonville Office</div>
+      <div class="loc-phone">3164 Port Sheldon St &nbsp;·&nbsp; (616) 538-0150</div>
+    </div>
+  </div>
+  <div class="loc-divider"></div>
+  <div class="loc-item">
+    <div class="loc-dot"></div>
+    <div>
+      <div class="loc-name">Grand Haven Office</div>
+      <div class="loc-phone">4 Washington Ave &nbsp;·&nbsp; (616) 842-5820</div>
+    </div>
+  </div>
+  <div class="loc-btn">
+    <a href="#" class="btn-primary" style="font-size:12px;padding:10px 18px;">Get Directions →</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-eyebrow">What we offer</div>
+  <h2 class="section-h2">Complete eye care for the whole family.</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-name">Comprehensive Eye Exams</div>
+      <div class="service-desc">Full vision and eye health evaluation for adults and children. Glaucoma testing, dilation, and prescription updates included.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-name">Contact Lens Fittings</div>
+      <div class="service-desc">Expert fittings including hard-to-fit and bifocal contacts. Dr. Vollink is regarded as a specialist in complex contact lens cases.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-name">Eyeglass Frames</div>
+      <div class="service-desc">Curated selection of frames for every style and budget. Our staff will help you find a pair that fits your face and your life.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-name">Emergency Eye Care</div>
+      <div class="service-desc">Same-day appointments available for eye injuries, infections, and sudden vision changes. Call us first.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-name">Pre &amp; Post-Op Care</div>
+      <div class="service-desc">Full co-management for LASIK and other surgical procedures. We coordinate with your surgeon through every step.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-name">Sunglasses &amp; Sport Lenses</div>
+      <div class="service-desc">Prescription sunglasses and sport-specific lenses for an active West Michigan lifestyle. UV protection done right.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <div class="section-eyebrow light">About Dr. Vollink</div>
+    <h2 class="section-h2 light">20 years. Two locations. One standard of care.</h2>
+    <p class="about-body">Dr. Michael Vollink has been in private practice for over two decades, serving Hudsonville, Grand Haven, and the surrounding communities. A Ferris State graduate and West Michigan native, he built Vollink Eyecare on the belief that personalized attention makes all the difference.</p>
+    <div class="about-credentials">
+      <div class="cred"><div class="cred-num">20+</div><div class="cred-label">Years in practice</div></div>
+      <div class="cred"><div class="cred-num">2</div><div class="cred-label">Locations</div></div>
+      <div class="cred"><div class="cred-num">FSU</div><div class="cred-label">College of Optometry</div></div>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="testimonial">
+      <div class="testimonial-text">"The staff are very welcoming, informative and knowledgeable. You can tell they truly care about making sure you are well taken care of."</div>
+      <div class="testimonial-author">— Justin Fairbanks, Hudsonville patient</div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-text">"Chelsea was the best at helping me pick out my new frames. Dr. was great and the customer service is amazing."</div>
+      <div class="testimonial-author">— Tanya Schroeder, patient</div>
+    </div>
+    <a href="#" style="font-size:13px;color:var(--teal-mid);display:flex;align-items:center;gap:6px;font-weight:500;">Read more patient stories →</a>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking">
+  <div class="booking-left">
+    <div class="section-eyebrow light">Schedule a visit</div>
+    <h2 class="section-h2 light">Ready to see clearly?</h2>
+    <p class="booking-sub">Request an appointment at either location. We'll confirm within one business hour and send you everything you need before your visit.</p>
+  </div>
+  <div class="booking-form">
+    <div class="form-title">Book an Appointment</div>
+    <div class="form-subtitle">Both locations available — select your preference below.</div>
+    <div class="form-row">
+      <div class="form-field">
+        <div class="form-label">First name</div>
+        <input class="form-input" type="text" placeholder="Jane">
+      </div>
+      <div class="form-field">
+        <div class="form-label">Last name</div>
+        <input class="form-input" type="text" placeholder="Smith">
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-label">Phone number</div>
+      <input class="form-input" type="tel" placeholder="(616) 000-0000">
+    </div>
+    <div class="form-field">
+      <div class="form-label">Preferred location</div>
+      <select class="form-select">
+        <option>Hudsonville — 3164 Port Sheldon St</option>
+        <option>Grand Haven — 4 Washington Ave</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <div class="form-label">Visit type</div>
+      <select class="form-select">
+        <option>Annual eye exam</option>
+        <option>Contact lens fitting</option>
+        <option>New patient exam</option>
+        <option>Emergency / urgent visit</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <button class="form-submit">Request Appointment →</button>
+    <div class="form-note">We'll confirm your appointment within one business hour.</div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours">
+  <div class="hours-card">
+    <div class="hours-location">Hudsonville Office</div>
+    <div class="hours-address">3164 Port Sheldon St, Hudsonville, MI 49426</div>
+    <div class="hours-phone">(616) 538-0150</div>
+    <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">9:00 am – 6:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">9:00 am – 5:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">9:00 am – 5:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">9:00 am – 5:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">9:00 am – 12:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Saturday – Sunday</span><span class="hours-time closed">Closed</span></div>
+  </div>
+  <div class="hours-card">
+    <div class="hours-location">Grand Haven Office</div>
+    <div class="hours-address">4 Washington Ave, Grand Haven, MI 49417</div>
+    <div class="hours-phone">(616) 842-5820</div>
+    <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">9:00 am – 5:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">8:00 am – 7:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">8:00 am – 5:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">8:00 am – 6:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">8:00 am – 4:00 pm</span></div>
+    <div class="hours-row"><span class="hours-day">Saturday – Sunday</span><span class="hours-time closed">Closed</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Vollink <span>Eyecare</span></div>
+      <div class="footer-desc">Serving Hudsonville, Grand Haven, and West Michigan families for over 20 years. Two locations, one standard of care.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links">
+        <a href="#">Eye Exams</a>
+        <a href="#">Contact Lenses</a>
+        <a href="#">Frames &amp; Glasses</a>
+        <a href="#">Emergency Care</a>
+        <a href="#">Pre &amp; Post-Op</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Patient Info</div>
+      <div class="footer-links">
+        <a href="#">New Patient Forms</a>
+        <a href="#">Insurance &amp; Payments</a>
+        <a href="#">Book Appointment</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vollink Eyecare. All rights reserved.</span>
+    <span>Hudsonville · Grand Haven · West Michigan</span>
+  </div>
+</footer>
+
+</body>
+</html>
