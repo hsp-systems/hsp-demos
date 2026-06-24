@@ -201,7 +201,26 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
   .rgrid,.bgrid{grid-template-columns:1fr}
   .clients-bar,.accred,.cta-sec,footer{padding-left:24px;padding-right:24px}
   .footer-bottom{flex-direction:column;text-align:center}
+  .hiw-grid{grid-template-columns:1fr 1fr}
 }
+
+/* HOW IT WORKS */
+.hiw-sec{background:var(--navy);padding:80px 60px}
+.hiw-hdr{text-align:center;margin-bottom:52px}
+.hiw-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-light);margin-bottom:20px;justify-content:center}
+.hiw-eyebrow::before{content:'';width:20px;height:1px;background:var(--teal-light)}
+.hiw-eyebrow::after{content:'';width:20px;height:1px;background:var(--teal-light)}
+.hiw-h2{font-family:'Libre Baskerville',serif;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.12;color:var(--white)}
+.hiw-h2 em{font-style:italic;color:var(--teal-light)}
+.hiw-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.hiw-card{background:rgba(255,255,255,0.05);border-top:2px solid transparent;padding:36px 28px;transition:background 0.25s,border-color 0.25s}
+.hiw-card:hover{background:rgba(255,255,255,0.09);border-color:var(--teal)}
+.hiw-n{font-family:'Libre Baskerville',serif;font-size:48px;font-weight:700;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px;display:block;transition:color 0.25s}
+.hiw-card:hover .hiw-n{color:rgba(27,122,138,0.25)}
+.hiw-title{font-family:'Libre Baskerville',serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px}
+.hiw-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,0.62);line-height:1.7}
+.hiw-cta{text-align:center;margin-top:48px}
+.hiw-cta p{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);margin-bottom:18px}
 </style>
 </head>
 <body>
@@ -251,6 +270,39 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjM2IiB2aWV3Qm94PSIwIDAgMTAwIDM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjUwIiB5PSIyMyIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiM4ODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5DT05NRUQ8L3RleHQ+PC9zdmc+" alt="CONMED" class="clogo" title="CONMED">
 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA5MCAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSI0NSIgeT0iMjMiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjODg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMSI+UE9SVEFHRTwvdGV4dD48L3N2Zz4=" alt="Portage" class="clogo" title="Portage">
 
+  </div>
+</div>
+
+<div class="hiw-sec">
+  <div class="hiw-hdr fade-up">
+    <div class="hiw-eyebrow">How It Works</div>
+    <h2 class="hiw-h2">From first call to <em>lasting results.</em></h2>
+  </div>
+  <div class="hiw-grid">
+    <div class="hiw-card fade-up">
+      <span class="hiw-n">01</span>
+      <div class="hiw-title">30-Minute Diagnostic Call</div>
+      <p class="hiw-desc">Tell us where the drag is. No prep work required. We will identify your top constraint using the Focus and Align Framework in the first conversation.</p>
+    </div>
+    <div class="hiw-card fade-up">
+      <span class="hiw-n">02</span>
+      <div class="hiw-title">Prioritized Roadmap</div>
+      <p class="hiw-desc">We cut the initiative list to three or four priorities with the highest leverage and build a 90-day roadmap with clear owners, targets, and quick wins.</p>
+    </div>
+    <div class="hiw-card fade-up">
+      <span class="hiw-n">03</span>
+      <div class="hiw-title">On-Site Deployment</div>
+      <p class="hiw-desc">We run the work alongside your team on the floor. Not remotely. Not through a slide deck. Executing and coaching where the work actually happens.</p>
+    </div>
+    <div class="hiw-card fade-up">
+      <span class="hiw-n">04</span>
+      <div class="hiw-title">Internal Capability Built In</div>
+      <p class="hiw-desc">Every engagement ends with documented playbooks and trained internal leads. Results hold after we leave because your team owns the system.</p>
+    </div>
+  </div>
+  <div class="hiw-cta fade-up">
+    <p>Ready to identify your top constraint?</p>
+    <a href="contact.html" class="btn-white">Schedule a Free Call</a>
   </div>
 </div>
 
