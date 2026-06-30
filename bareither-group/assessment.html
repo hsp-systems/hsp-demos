@@ -594,6 +594,25 @@ function confirmBooking(){
 /* ---------------- init ---------------- */
 buildAssessment();
 updateProgress();
+
+/* ── handoff from the inline homepage assessment (steps 1-2 already done there) ── */
+(function(){
+  let pre; try{ pre = sessionStorage.getItem('bgc_assess'); }catch(e){ return; }
+  if(!pre) return;
+  try{
+    const d = JSON.parse(pre); sessionStorage.removeItem('bgc_assess');
+    data.firstName=d.firstName||""; data.lastName=d.lastName||""; data.email=d.email||"";
+    data.situation=d.situation||""; data.size=d.size||""; data.company=d.company||"";
+    const set=(id,v)=>{ const el=document.getElementById(id); if(el) el.value=v; };
+    set('firstName',data.firstName); set('lastName',data.lastName); set('email',data.email); set('company',data.company);
+    const cons=document.getElementById('consent1'); if(cons) cons.checked=true;
+    document.querySelectorAll('#situationChoices .choice').forEach(c=>{ if(c.dataset.val===data.situation) c.classList.add('sel'); });
+    document.querySelectorAll('#sizeGrid .size-opt').forEach(s=>{ if(s.dataset.val===data.size) s.classList.add('sel'); });
+    sendLead();   // capture the lead handed off from the homepage
+    goTo(3);      // jump straight to the 6-question assessment
+  }catch(e){}
+})();
+
 window.addEventListener('popstate',e=>{
   if(e.state&&e.state.step){ document.getElementById('step'+current).classList.remove('active'); current=e.state.step; document.getElementById('step'+current).classList.add('active'); updateProgress(); }
 });
