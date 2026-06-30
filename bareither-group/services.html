@@ -96,6 +96,21 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
   .cta-sec,footer{padding-left:24px;padding-right:24px}
   .footer-bottom{flex-direction:column;text-align:center}
 }
+/* ── mobile nav (hamburger) ── */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:10px;z-index:101}
+.nav-toggle span{display:block;height:2px;width:100%;background:var(--navy);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  nav .nav-links{display:flex;position:fixed;top:76px;left:0;right:0;z-index:99;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:8px 24px 18px;box-shadow:0 16px 30px rgba(15,43,91,0.10);transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease;max-height:calc(100vh - 76px);overflow-y:auto}
+  nav .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  nav .nav-links li{width:100%}
+  nav .nav-links a{display:block;width:100%;padding:14px 2px;font-size:15px;border-bottom:1px solid var(--border)}
+  nav .nav-links li:last-child a{border-bottom:0}
+  nav .nav-links a.nav-cta{margin-top:12px;text-align:center;padding:14px 24px;border-bottom:0}
+}
   </style>
 </head>
 <body>
@@ -109,6 +124,7 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
     <li><a href="download.html">Improve LESS</a></li>
     <li><a href="assessment.html" class="nav-cta">Free Assessment</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var n=this.parentNode.querySelector('.nav-links');var o=n.classList.toggle('open');this.classList.toggle('is-open',o);this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="page-banner">
@@ -236,8 +252,8 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
 <section class="cta-sec">
   <div class="wrap fade-up">
     <h2>Not sure which service<br>fits your <em>situation?</em></h2>
-    <p>A 30-minute call is enough to identify the real bottleneck and which engagement makes sense. No pitch deck, no obligation.</p>
-    <a href="contact.html" class="btn-navy">Schedule a Call</a>
+    <p>Take the free 4-step assessment to pinpoint your biggest opportunity, then book a 30-minute call to map which engagement makes sense. No pitch deck, no obligation.</p>
+    <a href="assessment.html" class="btn-navy">Take the Free Assessment</a>
   </div>
 </section>
 

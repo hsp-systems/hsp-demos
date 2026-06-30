@@ -118,12 +118,27 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .result-focus .rf-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-light);margin-bottom:8px}
 .result-focus .rf-area{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:10px}
 .result-focus .rf-body{font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.65}
-.cal-wrap{border:1px solid var(--border);border-radius:5px;overflow:hidden;background:var(--off-white);min-height:200px}
+.cal-wrap{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);min-height:200px}
 .cal-wrap iframe{width:100%;border:none;min-height:620px;display:block}
-.cal-placeholder{padding:50px 30px;text-align:center}
-.cal-placeholder .cp-icon{font-size:34px;margin-bottom:14px}
-.cal-placeholder h3{font-family:'Libre Baskerville',serif;font-size:19px;color:var(--navy);margin-bottom:8px}
-.cal-placeholder p{font-size:13px;color:var(--text-muted);max-width:340px;margin:0 auto;line-height:1.6}
+.cal-mock{padding:26px 24px}
+.cal-mock-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.cm-icon{font-size:24px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--off-white);border-radius:10px;flex-shrink:0}
+.cm-title{font-family:'Libre Baskerville',serif;font-size:18px;color:var(--navy);font-weight:700;line-height:1.2}
+.cm-sub{font-size:13px;color:var(--text-muted);margin-top:3px}
+.cm-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.cm-slot{display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 6px;background:var(--white);border:1.5px solid var(--border);border-radius:7px;cursor:pointer;font-family:inherit;transition:border-color .18s,background .18s,transform .12s}
+.cm-slot span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);font-weight:600}
+.cm-slot strong{font-size:14px;color:var(--text);font-weight:600}
+.cm-slot:hover{border-color:var(--teal);transform:translateY(-1px)}
+.cm-slot.sel{border-color:var(--teal);background:rgba(27,122,138,0.08)}
+.cm-slot.sel strong{color:var(--teal)}
+.cm-confirm{width:100%;opacity:.5;pointer-events:none}
+.cm-confirm.ready{opacity:1;pointer-events:auto}
+.cm-foot{font-size:12px;color:var(--text-muted);text-align:center;margin-top:14px;line-height:1.5}
+.cal-confirmed{padding:46px 30px;text-align:center}
+.cc-check{width:54px;height:54px;border-radius:50%;background:var(--teal);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.cal-confirmed h3{font-family:'Libre Baskerville',serif;font-size:21px;color:var(--navy);margin-bottom:10px}
+.cal-confirmed p{font-size:14px;color:var(--text-mid);max-width:390px;margin:0 auto;line-height:1.65}
 
 /* nav buttons */
 .actions{display:flex;align-items:center;justify-content:space-between;margin-top:32px;gap:14px}
@@ -162,6 +177,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 a.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 24px;border-radius:3px;font-weight:600!important;font-size:13px!important}
 a.nav-cta:hover{background:var(--navy-mid)!important}
 @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}}
+/* ── footer (was missing on this page) ── */
+footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(255,255,255,0.08)}
+.footer-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:56px}
+.flogo img{height:36px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1)}
+.ftagline{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;max-width:200px;margin-bottom:18px}
+.fcontact{font-size:13px;color:rgba(255,255,255,0.42);line-height:2.2}
+.fcontact a{color:rgba(255,255,255,0.62);text-decoration:none}
+.fcontact a:hover{color:var(--white)}
+.fcol-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-bottom:18px;display:block}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:12px}
+.flinks a{font-size:13px;color:rgba(255,255,255,0.52);text-decoration:none;transition:color 0.2s}
+.flinks a:hover{color:var(--white)}
+.footer-bottom{max-width:1140px;margin:44px auto 0;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fcopy{font-size:12px;color:rgba(255,255,255,0.26)}
+/* ── mobile nav (hamburger) ── */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:10px;z-index:101}
+.nav-toggle span{display:block;height:2px;width:100%;background:var(--navy);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  nav .nav-links{display:flex;position:fixed;top:76px;left:0;right:0;z-index:99;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:8px 24px 18px;box-shadow:0 16px 30px rgba(15,43,91,0.10);transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease;max-height:calc(100vh - 76px);overflow-y:auto}
+  nav .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  nav .nav-links li{width:100%}
+  nav .nav-links a{display:block;width:100%;padding:14px 2px;font-size:15px;border-bottom:1px solid var(--border)}
+  nav .nav-links li:last-child a{border-bottom:0}
+  nav .nav-links a.nav-cta{margin-top:12px;text-align:center;padding:14px 24px;border-bottom:0}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center;gap:10px}
+  footer{padding:56px 24px 32px}
+}
 </style>
 </head>
 <body>
@@ -174,6 +221,7 @@ a.nav-cta:hover{background:var(--navy-mid)!important}
     <li><a href="download.html">Improve LESS</a></li>
     <li><a href="assessment.html" class="nav-cta">Free Assessment</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var n=this.parentNode.querySelector('.nav-links');var o=n.classList.toggle('open');this.classList.toggle('is-open',o);this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="shell">
@@ -308,11 +356,32 @@ a.nav-cta:hover{background:var(--navy-mid)!important}
       <h2 style="font-size:21px;margin-bottom:8px">Let's pressure-test it together.</h2>
       <p class="sub" style="margin-bottom:22px">Grab 30 minutes with Chad. We'll dig into this opportunity and map the fastest path to ROI — no obligation, no pitch deck.</p>
 
+      <!-- When CONFIG.CALENDAR_URL is set, loadCalendar() replaces the contents of #calWrap
+           with the live GHL booking iframe. Until then, this branded mock shows the booking experience. -->
       <div class="cal-wrap" id="calWrap">
-        <div class="cal-placeholder">
-          <div class="cp-icon">📅</div>
-          <h3>Booking calendar embeds here</h3>
-          <p>In the live version, your GHL / booking calendar loads right here so prospects book without leaving the page. Set <code>CALENDAR_URL</code> in the CONFIG block to activate.</p>
+        <div class="cal-mock" id="calMock">
+          <div class="cal-mock-head">
+            <div class="cm-icon">📅</div>
+            <div>
+              <div class="cm-title">Book your 30-minute call</div>
+              <div class="cm-sub">with Chad Bareither · video or phone</div>
+            </div>
+          </div>
+          <div class="cm-slots" id="cmSlots">
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Tue</span><strong>9:30 AM</strong></button>
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Tue</span><strong>1:00 PM</strong></button>
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Wed</span><strong>11:00 AM</strong></button>
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Thu</span><strong>8:30 AM</strong></button>
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Thu</span><strong>3:30 PM</strong></button>
+            <button type="button" class="cm-slot" onclick="pickSlot(this)"><span>Fri</span><strong>10:00 AM</strong></button>
+          </div>
+          <button type="button" class="btn btn-primary cm-confirm" id="cmConfirm" onclick="confirmBooking()">Select a time to continue</button>
+          <p class="cm-foot">No pitch deck, no obligation — just a focused conversation about your biggest opportunity.</p>
+        </div>
+        <div class="cal-confirmed" id="calConfirmed" style="display:none">
+          <div class="cc-check">✓</div>
+          <h3>You're all set<span id="ccName"></span>.</h3>
+          <p>We've reserved <strong id="ccSlot"></strong>. A calendar invite is on its way to <strong id="ccEmail"></strong> with the video link and a short prep note from Chad.</p>
         </div>
       </div>
     </div>
@@ -501,6 +570,25 @@ function loadCalendar(){
     document.getElementById('calWrap').innerHTML =
       `<iframe src="${CONFIG.CALENDAR_URL}" scrolling="no"></iframe>`;
   }
+}
+
+/* ---------------- booking mock (demo mode only) ---------------- */
+let pickedSlot = null;
+function pickSlot(el){
+  document.querySelectorAll('#cmSlots .cm-slot').forEach(s=>s.classList.remove('sel'));
+  el.classList.add('sel');
+  pickedSlot = el.querySelector('span').textContent + ' at ' + el.querySelector('strong').textContent;
+  const btn = document.getElementById('cmConfirm');
+  btn.textContent = 'Confirm ' + pickedSlot + ' →';
+  btn.classList.add('ready');
+}
+function confirmBooking(){
+  if(!pickedSlot) return;
+  document.getElementById('ccName').textContent = data.firstName ? ', ' + data.firstName : '';
+  document.getElementById('ccSlot').textContent = pickedSlot;
+  document.getElementById('ccEmail').textContent = data.email || 'your inbox';
+  document.getElementById('calMock').style.display = 'none';
+  document.getElementById('calConfirmed').style.display = 'block';
 }
 
 /* ---------------- init ---------------- */

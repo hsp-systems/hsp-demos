@@ -100,6 +100,21 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
   .cta-sec,.accred-strip,footer{padding-left:24px;padding-right:24px}
   .footer-bottom{flex-direction:column;text-align:center}
 }
+/* ── mobile nav (hamburger) ── */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:10px;z-index:101}
+.nav-toggle span{display:block;height:2px;width:100%;background:var(--navy);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  nav .nav-links{display:flex;position:fixed;top:76px;left:0;right:0;z-index:99;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:8px 24px 18px;box-shadow:0 16px 30px rgba(15,43,91,0.10);transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease;max-height:calc(100vh - 76px);overflow-y:auto}
+  nav .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  nav .nav-links li{width:100%}
+  nav .nav-links a{display:block;width:100%;padding:14px 2px;font-size:15px;border-bottom:1px solid var(--border)}
+  nav .nav-links li:last-child a{border-bottom:0}
+  nav .nav-links a.nav-cta{margin-top:12px;text-align:center;padding:14px 24px;border-bottom:0}
+}
   </style>
 </head>
 <body>
@@ -113,6 +128,7 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
     <li><a href="download.html">Improve LESS</a></li>
     <li><a href="assessment.html" class="nav-cta">Free Assessment</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var n=this.parentNode.querySelector('.nav-links');var o=n.classList.toggle('open');this.classList.toggle('is-open',o);this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="page-banner">
@@ -157,11 +173,12 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
           <p>Chad Bareither started his operations career on the plant floor and has never left. Over more than two decades, he has deployed lean and operational excellence programs inside manufacturing operations across multiple industries, building the Focus and Align Framework from what he observed actually working versus what looked good in a presentation.</p>
           <p>The core observation driving all of his work: <strong>most plants are trying to do too much.</strong> They run dozens of initiatives, spread attention thin, and wonder why nothing sticks. The Focus and Align Framework is the structured answer to that problem. It brings leadership to agreement on the three or four priorities that will actually move the business, then builds the deployment system to get there.</p>
           <p>Chad's engagement model reflects this same discipline. He works on-site with client teams, facilitating the work where it happens. Not remotely. Not through a slide deck. The Assess, Implement, and Sustain approach is built to transfer capability to the internal team so that results hold after the engagement ends.</p>
+          <p>For teams ready to move, the typical starting point is the <strong>Focus &amp; Align&trade; Performance Pathway</strong> — a one-week, on-site operational assessment that pinpoints your top three improvement opportunities and delivers a quantified ROI roadmap. It's a fixed $9,500 fee, credited in full toward any follow-on engagement within 90 days.</p>
           <p>In 2023, he codified the framework into <strong>Improve LESS</strong>, a 119-page guide written without filler. The book covers the five-step process toward Operational Excellence and has been adopted by plant leaders and lean practitioners across the industry.</p>
           <p>Bareither Group Consulting is an <strong>ILSSI accredited training partner</strong>, providing formal lean and continuous improvement training that meets international standards.</p>
         </div>
         <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap">
-          <a href="contact.html" class="btn-navy">Schedule a Call</a>
+          <a href="assessment.html" class="btn-navy">Take the Free Assessment</a>
           <a href="download.html" class="btn-teal">Get the Book</a>
         </div>
       </div>
@@ -238,8 +255,8 @@ footer{background:var(--navy);padding:64px 60px 40px;border-top:1px solid rgba(2
 <section class="cta-sec">
   <div class="wrap fade-up">
     <h2>Ready to talk about<br>your <em>operation?</em></h2>
-    <p>Schedule a 30-minute call. We'll identify the real bottleneck and whether we're a good fit. No pitch deck, no obligation.</p>
-    <a href="contact.html" class="btn-navy">Schedule a Call</a>
+    <p>Start with the free 4-step assessment. You'll see your biggest operational opportunity, then book a 30-minute call to dig in and decide whether we're a good fit. No pitch deck, no obligation.</p>
+    <a href="assessment.html" class="btn-navy">Take the Free Assessment</a>
   </div>
 </section>
 
