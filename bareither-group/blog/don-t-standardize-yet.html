@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don&#x27;t Standardize ... Yet | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Process Improvement</span>
+  <h1 class="a-title">Don&#x27;t Standardize ... Yet</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>May 11, 2025</span><span class="dot"></span><span>3 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_81de93459e36417b9a524fa04f2ce205~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_85,usm_0.66_1.00_0.01/e37051_81de93459e36417b9a524fa04f2ce205~mv2.jpg" alt="Don&#x27;t Standardize ... Yet" loading="lazy"></div>
+  <div class="article-body">
+<p>Updated: May 12, 2025</p>
+<p>Organizations often leap directly into standardizing processes, believing that documented procedures alone will drive consistency and improvement. However, without first stabilizing those processes (demand, capacity, quality, attendance, supply), standardization can become an exercise in futility-like building a house on shifting sand.</p>
+<p>This month, we explore why stabilization must precede standardization and how this sequence unlocks true, sustainable improvement.</p>
+<p><strong>Why Stability Should Come First</strong></p>
+<p>A process that consistently delivers predictable outcomes with minimal variation is stable. In contrast, standardization is about defining and documenting the “best known way” to perform a task. Attempting to standardize a process that is still highly variable is not only ineffective but can also embed inefficiencies and errors into your operations.</p>
+<p>A dynamic, unstable system-where outcomes fluctuate due to uncontrolled variables-cannot support meaningful standards. If every day brings a new way of working, any standard will quickly become obsolete or ignored. Stabilization creates the necessary foundation: only when a process is repeatable and reliable does it make sense to capture and formalize that method as a standard.</p>
+<p><strong>The Pitfalls of Premature Standardization</strong></p>
+<ul>
+<li><strong>Embedding Instability:</strong>Standardizing an unstable process locks in variation and waste, making root cause analysis and future improvements more difficult.</li>
+<li><strong>Loss of Credibility:</strong>Employees quickly lose faith in standards that do not reflect operational reality, undermining engagement with continuous improvement efforts.</li>
+<li><strong>Wasted Resources:</strong>Time and effort spent documenting and training on unstable processes are soon lost as those standards require constant revision.</li>
+</ul>
+<p><strong>How to Stabilize Before Standardizing</strong></p>
+<p>Stabilization is achieved through a combination of process observation, root cause analysis, and the implementation of basic controls. Key tools and approaches include:</p>
+<ul>
+<li><strong>Measure and Monitor Production Capacity:</strong>Assess your actual (results) versus your plan to identify bottlenecks and resource utilization.</li>
+<li><strong>Visual Management and Andon Systems:</strong>Making process performance visible in real time to quickly address deviations.</li>
+<li><strong>Preventive Maintenance and Error-Proofing (Poka-Yoke):</strong>Reducing equipment and human error as sources of variability.</li>
+</ul>
+<p>Once you have predictable, repeatable process, then standardization can capture the “best way” and serve as a platform for further improvement.</p>
+<p>Stabilization and standardization are not competing priorities-they are sequential steps in the Lean journey. Stabilization ensures that processes are predictable and reliable, while standardization locks in those gains and provides a foundation for continuous improvement. Organizations that respect this order avoid the trap of codifying chaos and instead build resilient, high-performing operations.</p>
+<p><strong>Case Study</strong></p>
+<p>With a current client we are stabilizing production by creating a known capacity for the plant with the designed staffing levels.A target throughput enables easier production planning and problem solving. Quality and financial performance become less variable.The staff is more engaged in identifying and solving problems. Only possible through stability, then standardization.</p>
+<p><strong>Key Takeaways</strong></p>
+<ul>
+<li>Stabilize processes first to reduce variation and establish predictability. </li>
+<li>Document to sustain the best-known methods. </li>
+<li>Empower the team to problem solve and improve. </li>
+</ul>
+<p>For organizations striving for operational excellence, remember: stabilize first, standardize second. Only then can you build a truly continuous improvement culture that delivers lasting results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

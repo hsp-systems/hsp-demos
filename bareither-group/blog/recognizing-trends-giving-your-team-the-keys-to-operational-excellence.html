@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recognizing Trends: Giving your Team the Keys to Operational Excellence | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Operational Excellence</span>
+  <h1 class="a-title">Recognizing Trends: Giving your Team the Keys to Operational Excellence</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Jun 13, 2025</span><span class="dot"></span><span>3 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_9ecb632374c14ba1811c163ad9ad5028~mv2.png/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/e37051_9ecb632374c14ba1811c163ad9ad5028~mv2.png" alt="Recognizing Trends: Giving your Team the Keys to Operational Excellence" loading="lazy"></div>
+  <div class="article-body">
+<p>In manufacturing and operations, the ability to recognize and adapt to trends is crucial for operational excellence. As leaders in these industries, you are tasked with not only meeting current demands but also anticipating future challenges and opportunities. Recognizing trends can enhance your operational strategies and drive sustained success.</p>
+<h2>But First ...</h2>
+<p>Who's job is it to understand current performance and recognize when we need to take action.</p>
+<p>The person closest to the work.</p>
+<p>Often that is your front-line value creators: fabricators, assemblers, material handlers, service technicians, customer service, etc.  And this is not reckless delegation.  Developing the capabilities, ensuring access to the data or information, and providing time and space to monitor and respond to trends is the <strong>responsibility of leadership</strong>.  The closer we can get identification and countermeasure to where the work is happening, the faster we can correct trends.</p>
+<h2>Why Spotting Trends Matters</h2>
+<p>Spotting trends is more than just watching for 'green' or 'red'; it’s being proactive and understanding how your business 'normally' performs, then responding when you get results you did not expect. Here are some important reasons why recognizing trends is crucial:</p>
+<ul>
+<li><strong>Understanding:</strong>Mith more eyes on the business, understanding what should be happening you have broader capability for process control.</li>
+<li><strong>Adaptability:</strong>Being able to quickly adjust and tweak your processes, products, and services leads to less down time and lower costs.</li>
+<li><strong>Escalation:</strong>Knowing what to expect and how you can affect it also clarifies when issues should be escalated so more resources can be mobilized to these challenges.</li>
+</ul>
+<h2>How to Effectively Spot Trends</h2>
+<p>To effectively spot trends, you need a solid approach. Here are some pre-requisites to trend-spotting:</p>
+<ul>
+<li><strong>Process Understanding:</strong>We should start with understanding the process that gives those results. Connect the output back to the process that generates it.</li>
+<li><strong>Accessible Data:</strong>I know we are in a digital/AI world. But that doesn't help the front line that is not looking at reports on the floor. Make the data visual and accessible. I always start with markers and flip chart/whiteboard.</li>
+<li><strong>Establish a Baseline:</strong>What we expect and what is normal might not be the same thing. Understanding the results your process can deliver today is a starting point to seeing a shift.</li>
+<li><strong>Talk About It:</strong>Reviewing as a team builds shared ownership and understanding. It brings in unique perspectives for insight and countermeasures.</li>
+</ul>
+<h2>Improving Performance</h2>
+<p>Once a trend is recognized, implementing continuous improvement can results in better performance. Here’s how these practices can help:</p>
+<ul>
+<li><strong>Respond, Don't React:</strong>When trend or outlier is identified, decide on how to move forward. Was there an assignable cause that is already addressed? Is there a countermeasure already in progress?</li>
+<li><strong>Experiment with Change:</strong>Identify what you want to try, what change in result you expect to get and align it with the team.</li>
+<li><strong>Close the Loop:</strong>With the change in place, did you get the result you expected. What did we learn? What should we try next?</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Recognizing trends is not just a reactive measure; it is a proactive strategy that can significantly enhance operational excellence in manufacturing.</p>
+<p>By developing people, leveraging data, and implementing continuous improvement practices, you can position your organization to thrive in a changing landscape.</p>
+<p>Promote data review and trend recognition - take the first step toward a more resilient and successful future.</p>
+<p>When people across the org have their eyes on processes, you (individually) can #improveLESS ... and get better results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

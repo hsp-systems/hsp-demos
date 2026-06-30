@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Devil We Know: A Practical Starting Line for Operational Excellence | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Operational Excellence</span>
+  <h1 class="a-title">The Devil We Know: A Practical Starting Line for Operational Excellence</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>May 19, 2026</span><span class="dot"></span><span>6 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_87d0f8816ef6460ca6193977a5af295c~mv2.png/v1/fill/w_400,h_1000,al_c,q_90,usm_0.66_1.00_0.01/e37051_87d0f8816ef6460ca6193977a5af295c~mv2.png" alt="The Devil We Know: A Practical Starting Line for Operational Excellence" loading="lazy"></div>
+  <div class="article-body">
+<p>I contend, leaders do not need false urgency to begin continuous improvement.</p>
+<p>They do not need a consultant telling them the sky is falling.</p>
+<p>They do not need a burning platform. 
+They do not need a crisis. </p>
+<p>Most leaders already know where the pain is.</p>
+<p>They know the process that breaks down every month. They know the report that takes three people too long to build. They know the handoff that always creates rework. They know the customer issue that keeps showing back up. They know the department that depends too much on one heroic person. They know the meeting where the same problems get discussed but never really solved.</p>
+<p>That is <strong>the devil we know</strong>.</p>
+<p>And for many organizations, that is the most honest starting line for operational excellence.</p>
+<h2>The hesitation is understandable</h2>
+<p>I am seeing some hesitation to invest in continuous improvement right now.</p>
+<p>That makes sense ... but I don't understand it.</p>
+<p>Leaders are watching costs ... while we continue to waste money.</p>
+<p>Teams are stretched ... and we run overtime and add checks.</p>
+<p>Priorities are shifted ... as we continue to expedite.</p>
+<p>Nobody wants another “program” added on top of already full calendars.</p>
+<p>And to be clear, I do not believe operational excellence should be sold through panic.</p>
+<p>Fear might create movement, but it rarely creates ownership.</p>
+<p>The better case for continuous improvement is not false urgency - it is disciplined honesty.</p>
+<p>What problems are already costing time, trust, cash, and capacity?</p>
+<p>Because those problems do not disappear when we ignore them. They usually get normalized. They become part of how work gets done.</p>
+<h2>Familiar does not mean harmless</h2>
+<p>One of the reasons known problems persist is because they become familiar.</p>
+<p>The tribal knowledge becomes the training system. The workaround becomes the process. The expedite becomes the plan. The recurring miss becomes “just how it is here.”</p>
+<p>That familiarity can make the problem feel less risky, but familiar problems still carry a cost.</p>
+<p>Sometimes that cost shows up as excess inventory, overtime, rework, backorders, late orders, margin loss, or customer frustration. Sometimes it shows up as leadership fatigue. Sometimes it shows up as the quiet burnout of good people who are tired of fighting the same fire with the same bucket.</p>
+<p>In <em>Improve LESS</em>, I wrote that the biggest barrier to continuous improvement is often starting. "Nothing changes if we do not change something." But the change does not have to be massive. The better move is often to improve fewer things, but the right things.</p>
+<p>That is why the “devil we know” matters.</p>
+<p>It gives us a real place to begin.</p>
+<h2>Start with the problem the team already feels</h2>
+<p>A practical starting point for operational excellence is not always a full transformation.</p>
+<p>It may be one known problem.</p>
+<p>One process. One handoff. One recurring miss. One planning loop. One daily frustration.</p>
+<p>The goal is not to solve everything.</p>
+<p>The goal is to build the muscle for solving something that matters.</p>
+<p>That starts with a simple question:</p>
+<p><strong>What is the problem our team already knows, but has learned to work around?</strong></p>
+<p>For one manufacturer we worked with, the known problems were tribal knowledge, manual workarounds, and key processes held together by individual heroics.</p>
+<p>Order-to-cash and production planning were getting done, but not in a way that would scale. Once those problems were made visible and simplified, the organization freed capacity and reduced the risk of expired inventory waste.</p>
+<p>That is not abstract improvement. That is working on the business problem already in front of you.</p>
+<h2>Turn the complaint into a gap</h2>
+<p>There is an important shift that happens when a leader moves from talking about a frustration to defining a problem.</p>
+<p>A frustration sounds like this:</p>
+<p>“Orders are always a mess.”</p>
+<p>“Planning takes too long.”</p>
+<p>“Nobody follows the process.”</p>
+<p>“We have too many inventory issues.”</p>
+<p>“We are always firefighting.”</p>
+<p>A problem sounds like this:</p>
+<p>“We expect X, but we are getting Y.”</p>
+<p>That gap matters.</p>
+<p>Expected result versus actual result.</p>
+<p>That is where improvement begins.</p>
+<p>If the team expects 95% schedule attainment and gets 82%, there is a gap.</p>
+<p>If the team expects invoices to be resolved within 10 days and they are aging past 30, there is a gap.</p>
+<p>If the team expects inventory errors to be rare and they happen every week, there is a gap.</p>
+<p>Once the gap is clear, the conversation changes.</p>
+<p>It becomes less emotional. Less personal. More useful.</p>
+<p>Now the team can ask:</p>
+<p>Where does the process break down? What conditions create the miss? What information is missing? Who owns the handoff? What gets escalated too late? What are we tolerating because we have gotten used to it?</p>
+<p>This is the moment operational excellence becomes practical.</p>
+<h2>The first improvement should build confidence</h2>
+<p>The first move matters.</p>
+<p>If leaders launch too broad, they overload the organization.</p>
+<p>If they chase too many problems, they dilute attention.</p>
+<p>If they jump to tools before defining the problem, teams see it as another initiative instead of help with the real work.</p>
+<p>A better starting point is smaller and sharper.</p>
+<p>Pick a known problem.</p>
+<p>Define the gap.</p>
+<p>Observe the work.</p>
+<p>Make the current process visible.</p>
+<p>Clarify ownership.</p>
+<p>Test a better way.</p>
+<p>This does two things.</p>
+<ul>
+<li>it improves the process. </li>
+<li>it teaches the organization how to improve. </li>
+</ul>
+<p>That second part is the long-term value.</p>
+<p>Operational excellence is not just the result of a project. It is the capability to see problems, align around them, solve them, and sustain the better condition.</p>
+<p>In a wholesale distributor we worked with, daily management gave branch teams a real scoreboard. Instead of waiting for monthly or quarterly reviews, frontline teams could see performance, surface issues, and take action closer to the work. That shift helped reduce inventory errors and build ownership across the branches.</p>
+<p>That is the kind of starting point that creates traction.</p>
+<p>Not because someone created panic. Because the work became visible, owned, and manageable.</p>
+<h2>Do not confuse caution with inaction</h2>
+<p>Leaders should be thoughtful about where they invest.</p>
+<p>That is good stewardship.</p>
+<p>But caution becomes expensive when it turns into delay around problems that are already known.</p>
+<p>If a problem is costing capacity every week, it is already consuming resources.</p>
+<p>If a process depends on one person’s memory, the risk already exists.</p>
+<p>If teams are spending hours in meetings to coordinate around broken handoffs, that time is already being spent.</p>
+<p>If leaders are pulled into daily firefighting, the organization is already paying for the lack of a better system.</p>
+<p>The question is not whether continuous improvement costs something.</p>
+<p>It does.</p>
+<p>The better question is:</p>
+<p><strong>What is the current process already costing us?</strong></p>
+<p>Not just in dollars. (That is where the business case usually starts.)</p>
+<p>But also in <strong>attention, speed</strong>, and <strong>engagement</strong>.</p>
+<h2>The practical starting line</h2>
+<p>For leaders who are hesitant to begin, I would not recommend starting with a large transformation message.</p>
+<p>I would recommend starting with a working session around one question:</p>
+<p><strong>What is the devil we know?</strong></p>
+<p>Then narrow it down.</p>
+<p>Where do we already see recurring pain?</p>
+<p>Where do we have a measurable gap?</p>
+<p>Where are good people relying on workarounds?</p>
+<p>Where is leadership getting pulled into the same issue repeatedly?</p>
+<p>Where would solving one problem create visible relief?</p>
+<p>Then start there.</p>
+<p>Not with a slogan - With a problem.</p>
+<p>Not with a massive rollout - With a focused improvement.</p>
+<p>Operational excellence does not have to <strong>start</strong> as a company-wide transformation.</p>
+<p>It can start with the problem the team already feels.</p>
+<p>Then use that problem to build the muscle for better process thinking, daily management, and sustained results.</p>
+<p>That’s how you #improveLESS … and get better results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

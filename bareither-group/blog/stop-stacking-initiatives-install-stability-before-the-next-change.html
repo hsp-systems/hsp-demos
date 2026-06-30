@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Stacking Initiatives: Install Stability Before the Next Change | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Operational Excellence</span>
+  <h1 class="a-title">Stop Stacking Initiatives: Install Stability Before the Next Change</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Dec 16, 2025</span><span class="dot"></span><span>5 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_2ffe39f5b8034e578e20f9096b677f74~mv2.jpg/v1/fill/w_960,h_540,al_c,lg_1,q_85/e37051_2ffe39f5b8034e578e20f9096b677f74~mv2.jpg" alt="Stop Stacking Initiatives: Install Stability Before the Next Change" loading="lazy"></div>
+  <div class="article-body">
+<p>Updated: Dec 17, 2025</p>
+<p>A few weeks ago, a client surprised me in a way that (honestly) made me smile.</p>
+<p>They <strong>hit pause</strong>.</p>
+<p>Not because the business was slow. Not because they ran out of ideas. But because they finally recognized what was really happening:</p>
+<p>They were stacking strategic initiatives on top of an operation that hadn’t stabilized from the last round of change.</p>
+<p>So, the leadership team made a call:</p>
+<p>“For the next 90 days, we’re not launching anything new. We’re going to stabilize, solve problems, and build a system that can hold the gains.”</p>
+<p>That decision is rare. And it’s exactly how mature organizations get faster.</p>
+<h2>Why stacking initiatives makes you slower</h2>
+<p>Most leaders don’t intend to create chaos. They’re trying to improve. They’re trying to respond. They’re trying to keep up.</p>
+<p>But here’s the pattern I see (over and over):</p>
+<ul>
+<li>An initiative gets launched (new system, new KPI, new process, new “program”). </li>
+<li>Early momentum looks promising. </li>
+<li>Variation shows up (quality dips, schedules miss, overtime climbs, people improvise). </li>
+<li>Leaders jump in to “push it through.” </li>
+<li>Before the operation stabilizes, the next initiative starts. </li>
+</ul>
+<p>Now you’re not improving. You’re accumulating disruption.</p>
+<p>And disruption has a cost:</p>
+<ul>
+<li>firefighting replaces learning </li>
+<li>workarounds replace standards </li>
+<li>“busy” replaces progress </li>
+</ul>
+<p>There’s also a human cost. Research on repetitive reorganizations shows that <strong>uncertainty and workload</strong> are major drivers of change fatigue—which then increases resistance to future change. (<strong>Taylor &amp; Francis Online</strong>)</p>
+<p>If you want sustainable performance, you can’t treat people like they have unlimited capacity to absorb disruption.</p>
+<h2>The fastest organizations stabilize fast</h2>
+<p>There’s a paradox here that’s easy to miss:</p>
+<p><strong>The organizations that change the fastest are the ones with the strongest stability backbone.</strong></p>
+<p>One well-known framing (from the agility world) is that truly agile organizations learn to be both <strong>stable and dynamic</strong>—with a relatively unchanging “backbone” that enables speed. (<strong>McKinsey &amp; Company</strong>).  This matches what I see in manufacturing and operations:</p>
+<p>When your system is stable, you can:</p>
+<ul>
+<li>see problems quickly </li>
+<li>separate noise from signal </li>
+<li>test changes without breaking everything </li>
+<li>sustain gains without heroics </li>
+</ul>
+<p>And from an <em>Improve LESS</em> mindset, this is the point: don’t confuse “launching projects” with building capability. Focus creates flow—and flow requires stability. </p>
+<h2>The best way to stabilize: level load and standardize</h2>
+<p>When leaders say, “We need stability,” they often jump straight to documentation.</p>
+<p>But if your demand, staffing, quality, materials, or equipment reliability are unstable, a written procedure turns into shelfware. I wrote about this earlier: <strong>stabilize first, standardize second</strong>—otherwise you’re codifying chaos. (<strong>Bareither Group Co 1</strong>)</p>
+<p>So how do you stabilize fast without overcomplicating it?</p>
+<h3>1) Level load (smooth the system)</h3>
+<p>Level loading (heijunka) is one of the most practical stability levers you have. Done well, it reduces the unevenness that creates firefighting and overburden. It’s specifically used to create <strong>predictability and stability</strong> by smoothing volume and mix over time.</p>
+<p>In plain language: stop whipsawing your operation.  Even if you can’t perfectly level customer demand, you <em>can</em>:</p>
+<ul>
+<li>level what you release to the floor </li>
+<li>define a realistic, known capacity </li>
+<li>set production to a steady rhythm as much as possible </li>
+<li>protect bottlenecks from schedule chaos </li>
+</ul>
+<p>When the plan stops changing every hour, problem-solving gets easier. Performance becomes less variable. People can breathe—and think.</p>
+<h3>2) Standardize (create the baseline that exposes problems)</h3>
+<p>Standardized work reduces variability and gives you a baseline for improvement. It supports training, consistency, and makes abnormalities visible. (<strong>Lean Enterprise Institute</strong>)</p>
+<p>But here’s the nuance that matters, you don’t need a 40-page SOP to stabilize. Start by standardizing what creates stability <strong>first</strong>:</p>
+<ul>
+<li>the “best-known way” for the critical steps </li>
+<li>visual cues at the point of use </li>
+<li>leader standard work / daily confirmation </li>
+<li>a simple escalation path when the process misses </li>
+</ul>
+<p>Daily management matters here because it brings actionable information to leaders on a predictable basis. This is how stability becomes a system—not a slogan.</p>
+<h2>A simple 90-day plan to practice “installing stability”</h2>
+<p>If you’re going to pause new initiatives, like my client did, you need a plan that feels actionable. Here’s a pattern that works:</p>
+<h3>Days 1–30: Stabilize the rhythm</h3>
+<ul>
+<li>Define “known capacity” and the constraint </li>
+<li>Level the release plan (even if imperfectly) </li>
+<li>Write down your daily plan vs. actual review </li>
+<li>Track top disruptions - quality, equipment downtime, staffing, material issues </li>
+</ul>
+<h3>Days 31–60: Standardize the current best way</h3>
+<ul>
+<li>Create standard work for the constraint and key handoffs </li>
+<li>Train, verify, and visually support the standard </li>
+<li>Add basic controls (error-proofing, PM, simple checks) </li>
+<li>Tighten response: when it’s off-standard, we swarm it </li>
+</ul>
+<h3>Days 61–90: Solve root causes and lock in sustainment</h3>
+<ul>
+<li>Convert repeat disruptions into problem-solving </li>
+<li>Reduce the “special causes” that steal capacity </li>
+<li>Confirm leaders are protecting the cadence (calendar wins or chaos wins) </li>
+</ul>
+<p>At the end of 90 days, you should be able to say:</p>
+<ul>
+<li>performance is more predictable </li>
+<li>problems surface faster </li>
+<li>improvements stick longer </li>
+<li>the organization has - <em>more capacity</em>for the next change</li>
+</ul>
+<h2>Before you start the next initiative, ask:</h2>
+<ul>
+<li><strong>Is the operation level-loaded so we can see reality?</strong></li>
+<li><strong>Do we have a clear “current best way” for the critical work?</strong></li>
+<li><strong>Do leaders get information daily—so issues don’t hide for weeks?</strong></li>
+<li><strong>When we miss, do we problem-solve… or do we “push harder”?</strong></li>
+</ul>
+<p>If you can’t answer “yes” to most of these, the next initiative isn’t your bottleneck.</p>
+<p>Stability is.</p>
+<p>Focusing on Stability not just the next change is how you #improveLESS ... and gey better results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most “goals” aren’t goals, they’re guesses | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Strategy Deployment</span>
+  <h1 class="a-title">Most “goals” aren’t goals, they’re guesses</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Jan 12, 2026</span><span class="dot"></span><span>4 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_b14481d8d6d54d33a223d6c927bafd18~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01/e37051_b14481d8d6d54d33a223d6c927bafd18~mv2.jpg" alt="Most “goals” aren’t goals, they’re guesses" loading="lazy"></div>
+  <div class="article-body">
+<p>"Goal Setting" may have started for you in Q4 of 2025. Maybe you are still refining your priorities and targets now in January. These aspirations usually kick off a flurry of good intentions… and a slow drift back into firefighting by mid-February.</p>
+<p>Why?</p>
+<p>They’re broad.</p>
+<p>They’re crowded.</p>
+<p>They’re built on assumptions nobody has verified on the floor, in the process, or in the data.</p>
+<p>At Bareither Group, we talk a lot about <em>Focus</em> and <em>Align</em>—because stable results don’t come from inspirational posters. They come from clarity, choices, and a management system that turns strategy into weekly and daily execution.</p>
+<p>For the start of this new year, here’s a practical way to set goals you can actually achieve—by getting <strong>clear, specific, and narrow</strong> before you commit</p>
+<p>.</p>
+<h2>The hidden reason goals fail: you skipped the homework</h2>
+<p>Most teams set goals before they understand three things:</p>
+<ul>
+<li><strong>The current process (how work really happens)</strong></li>
+<li><strong>The pain points (where performance breaks down)</strong></li>
+<li><strong>The requirements (constraints the solution must meet)</strong></li>
+</ul>
+<p>In improvement work, we <em>don’t</em> move forward until there’s agreement on the current state and pain points—and confirmed requirements from stakeholders. That homework keeps the effort focused and measurable.</p>
+<p>Goal-setting should work the same way.</p>
+<p>If you can’t describe the current state with confidence, you’re not setting a goal—you’re placing a bet.</p>
+<h2>The Focus &amp; Align approach to goal-setting</h2>
+<p>In <em>Improve LESS</em>, the “Focus and Align Framework” is a five-step way to deploy strategy and build a system that holds. Here’s how it translates directly to setting goals:</p>
+<h3>1) WHY — Connect to mission &amp; vision</h3>
+<p>Mission, vision, and values create the lens that helps leaders “focus and align” around where you’re going.</p>
+<p><strong>Practical takeaway:</strong> Before you argue about targets, get aligned on intent.</p>
+<ul>
+<li>Why does this “better” benefit our customers? </li>
+<li>What are we protecting (values) while we chase these results? </li>
+</ul>
+<h3>2) WHAT — Establish the target</h3>
+<p>A key recommendation in the book: start with <strong>one objective</strong> to build muscle memory and avoid scattering effort and no more than three <strong>measurable goals</strong> for that objective.</p>
+<p><strong>Practical takeaway:</strong> If your 2026 list has 12 “top priorities,” you don’t have priorities—you have a wish list.</p>
+<h3>3) HOW — Make the goal executable (by mapping the system)</h3>
+<p>This is where most leaders feel the tension:</p>
+<ul>
+<li>“We want to improve on-time delivery.” </li>
+<li>“Okay… what - <em>actually</em>drives it?”</li>
+</ul>
+<p>A KPI tree is one way to visualize the system: requirements that influence the goal, the processes that deliver those requirements, and the evidence/metrics you can observe.</p>
+<p>And here’s the kicker: you <strong>don’t</strong> need to measure or improve everything—strategically, you focus on the parts with the biggest opportunity to influence the goal.</p>
+<p><strong>Practical takeaway:</strong> If you can’t name the controllable drivers, the goal will stay “leadership language” and never become “frontline execution.”</p>
+<h3>4) WHO — Assign ownership (without creating blame)</h3>
+<p>Ownership needs to fall to an individual—not so you can blame someone, but so it’s clear who reports status and facilitates improvement. Process ownership and KPI ownership go together.</p>
+<p><strong>Practical takeaway:</strong> Every goal needs:</p>
+<ul>
+<li>a named owner, </li>
+<li>and the authority to change the process when performance is off track. </li>
+</ul>
+<h3>5) WHEN — Build the cadence that sustains results</h3>
+<p>This is the difference between a goal and a <em>management system</em>.</p>
+<p>Daily management isn’t “cruise control.” Leadership creates accountability and coaching through recurring verification that processes are executed correctly and results match expectations. If the process wasn’t followed, return to the standard; if it was followed but results are off, coach through problem-solving—then repeat.</p>
+<p><strong>Practical takeaway:</strong> If your only “cadence” is a monthly PowerPoint review, you’re not managing—you’re observing, reading yesterday's news.</p>
+<h2>A quick test: Is your goal “focused” enough?</h2>
+<p>Use this checklist before you publish the goal to the organization:</p>
+<p><strong>A focused goal has:</strong></p>
+<ul>
+<li>A metric (not a theme) </li>
+<li>A baseline (not a guess) </li>
+<li>A target (not a hope) </li>
+<li>A named owner (not a function) </li>
+<li>A time frame + review cadence (not a guideline) </li>
+</ul>
+<p><strong>Example (too broad): “Improve productivity.”</strong></p>
+<p><strong>Example (focused): “Improve schedule attainment from 78% to 92% by March 27 by reducing changeover loss on Line 3.”</strong></p>
+<p>Notice what changed:</p>
+<ul>
+<li>It became measurable. </li>
+<li>It became narrow. </li>
+<li>It became actionable. </li>
+<li>It became achievable. </li>
+</ul>
+<p><strong>[Visual placeholder]</strong> Before/After goal rewrite graphic (two columns, red → green).</p>
+<h2>Do the homework first</h2>
+<p>This is one of your company values on the website, and it applies perfectly here:</p>
+<p><strong>“Be prepared — do the work up front to maximize value…”</strong> </p>
+<p>Don’t set the goal until you can answer:</p>
+<ul>
+<li>What does the process look like today? </li>
+<li>Where is the biggest point of cause? </li>
+<li>What constraints must we respect? </li>
+<li>What is the smallest set of actions that would move the metric? </li>
+</ul>
+<p>Then, set <strong>one goal</strong> for the next 90-days, not the full year.  That’s focus.</p>
+<p>If you’d like an outside perspective to pressure-test your goals <em>before</em> you cascade them—reach out. We help manufacturing and operations leaders stabilize costs, expand capacity, and grow profits by turning strategy into weekly and daily execution.</p>
+<p>That’s how you #improveLESS … and get better results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

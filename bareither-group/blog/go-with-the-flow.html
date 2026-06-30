@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go With The Flow | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Manufacturing Flow</span>
+  <h1 class="a-title">Go With The Flow</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Nov 15, 2022</span><span class="dot"></span><span>3 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/4e3557287322f2170f4c4c6d13618f95.jpg/v1/fill/w_1000,h_998,al_c,q_85/4e3557287322f2170f4c4c6d13618f95.jpg" alt="Go With The Flow" loading="lazy"></div>
+  <div class="article-body">
+<p>A state of <strong>flow </strong>is the mental state where a person is fully immersed in a feeling, sometimes known as being <strong>in the zone.</strong> This is characterized by focus, full involvement, and enjoyment in the process of the activity. In essence, flow is complete absorption in what one does leading to high performance and transforming the sense of time. From that standpoint, Flow seems to be this mystic state of perfection. Something that is amorphous and difficult to confirm when it's happening, but really it can be seen ... it can be <strong>measured</strong>.</p>
+<p>The five tenets of Lean Thinking (as originally described by Jim Womak in and Daniel Jones in 1996) are Value - Value Stream - Flow - Pull - Perfection. It is a logical way to proceed in interrogating your processes to banish waste and optimize value. After understanding your customer and what they 'value', you can construct the process map that describes how that value is delivered to the customer. This is conveyed in a Value Stream Map which holds several metrics inherent in its application to measure the performance of the cross-functional process, the value stream. At this point in the Lean journey it is important to note that we can see how well the process is flowing. Before seeking to improve Flow, let's first take stock in the amount of Flow that is present. All forms of process waste are represented and condensed into a simple metric on the Value Stream Map, Lead Time. I'll use the DOWNTIME acronym for this explanation.</p>
+<ul>
+<li>__Defects__impact the quality rate and throughput for a given process step. This typically adds cycle time to correct mistakes or requires additional resource capacity to make up for losses.</li>
+<li>__Overproduction__is seen in high or uneven work-in-process inventory between process steps. Out-producing the downstream customer is overproduction and a waste of the upstream resource. Inventory is translated into wait time between process steps.</li>
+<li>__Waitin__g is evident from the quantification if overproduced inventory above. Batch production also creates waiting, for example in transaction processes where a resource might wait for "enough" of a certain type of work to process requests.</li>
+<li>__Non-utilized__resources is shown in excess capacity where they are most likely waiting at points in the cycle. Moreover, the exclusion of those team members in problem solving and other continuous improvement is a waste.</li>
+<li>__Transportation__is reflected not only from suppliers to our facility but also between each process. This is sometimes embedded in the cycle times or overlooked altogether.</li>
+<li>__Inventory__is obvious from the overproduction discussion above. This is a product or service that is waiting for value to be added to it.</li>
+<li>__Motion__is embedded within the cycle times. Usually if we are keeping up with demand managers don't look any closer, but motion within the process is hidden waste.</li>
+<li>__Excess-processing__can be seen as entire process steps that are not required/valuable to the customer or, again, hidden within the cycle time of a process.</li>
+</ul>
+<p>When all of these wastes are added up in the Value Stream timeline we see the Flow of the process. All of the waste present in the value stream adds to the overall Lead Time metric. Our objective as continuous improvement professionals or Lean leaders in an organization is to maximize flow through the reduction of waste. A crucial step is being able to see it, being able to measure it to take it from concept to application. Now we can point to the process steps or workflow or piece of equipment that creates a bottleneck, choking off our flow. From there, systematic reduction of waste though structured problem solving with those performing the work opens up our bottlenecks and improves flow. You will also see that Lead Time measure begin to drop.</p>
+<p>... maybe that mystic state of Zen isn't too far away ...</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

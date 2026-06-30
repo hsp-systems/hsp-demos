@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Key to Lasting Success | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Operational Excellence</span>
+  <h1 class="a-title">The Key to Lasting Success</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Nov 16, 2023</span><span class="dot"></span><span>3 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/8d1ccaec74b74051ad21a2e5df34ce19.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/8d1ccaec74b74051ad21a2e5df34ce19.jpg" alt="The Key to Lasting Success" loading="lazy"></div>
+  <div class="article-body">
+<p>Title: Sustaining Improvements in Lean Manufacturing: The Key to Lasting Success</p>
+<p>In today's business world, efficiency isn't just beneficial; it's a competitive edge. Transitioning your business from traditional manufacturing system to one anchored in Continuous Improvement methodologies and beliefs can be a game-changer. At its core, continuous improvement is about learning. Through continual evaluation of our goals and refinement of our processes to attain them we reduce variation, eliminate waste, and improve productivity. Yet, one of its most crucial but often overlooked aspects is the challenge of sustaining these improvements over time.</p>
+<h2>The Pitfall: Failing to Sustain Improvements</h2>
+<p>While remarkable transformations can be achieved through continuous improvement method, the sustainability of these improvements is where many organizations stumble. It's easy to celebrate short-term wins, but ensuring that these changes endure requires a different level of commitment and strategy.</p>
+<h3>Understanding the Challenge</h3>
+<p>Sustaining improvements isn't a one-time task but an ongoing endeavor. That's because we are changing the way we operate our processes and manage the business. That change can't be made at one point in time and sustain indefinitely. Organizations often face hurdles such as:</p>
+<ul>
+<li>Complacency - Once initial improvements are made, there's a tendency to relax efforts, for leadership to not focus on training and confrmation of standards, leading to a gradual decline. </li>
+<li>Lack of Continuous Monitoring - Processes evolve, and so do inefficiencies. Without continuous monitoring, previously successful improvements can become outdated over time as products change, demand fluctuates, or new technologies are introduced. </li>
+<li>Insufficient Employee Involvement - Engaging employees in the improvement process is vital. Without their ongoing participation, sustaining improvements becomes arduous. </li>
+</ul>
+<h3>Strategies for Long-Term Success</h3>
+<ul>
+<li>
+<p>Focus on Culture and Behaviors - Encourage a mindset where employees are not just passive workers but active contributors to the company's growth. Foster an environment where innovation and improvement are ingrained in the company's DNA. One that prioritizes learning mindset, customer focus and employee empowerment. </p>
+</li>
+<li>
+<p>Ongoing Training and Development - Invest in continuous education and skill development programs. Equip your workforce with the necessary tools and knowledge to identify and address inefficiencies proactively. ONe of the most powerful things a leader can do for their team is a transparent development plan with intentional coaching. </p>
+</li>
+<li>
+<p>Regular Reviews and Adaptation - Establish a system and cadence for regular reviews and adaptations. Processes and market dynamics change, and so should your approach. Ensure that improvements are aligned with current needs and challenges. </p>
+</li>
+<li>
+<p>Celebrate Milestones and Share Success Stories - Recognize and celebrate achievements, no matter how small. Sharing success stories not only motivates employees but also reinforces the significance of sustained improvements. </p>
+</li>
+</ul>
+<h2>Conclusion: Embracing the Journey of Improvement</h2>
+<p>Sustaining improvements in your Continuous Improvement efforts is not a one-shot deal; it's a journey. It demands dedication, adaptability, and continuous effort. The companies that excel in Lean, Six Sigma, Theory of Constraints are those that recognize the importance of sustaining improvements and make it an integral part of their organizational culture.</p>
+<p>By nurturing a culture of continuous improvement, fostering employee involvement, and staying agile in responding to changing circumstances, organizations can ensure that the gains made through Lean methodologies aren't short-lived but become a sustainable competitive advantage in the long run. Remember, the journey towards improvement is perpetual, and the rewards of sustaining these improvements are immeasurable.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

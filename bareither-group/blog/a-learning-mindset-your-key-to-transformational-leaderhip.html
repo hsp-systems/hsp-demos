@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Learning Mindset - Your key to Transformational Leadership | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Leadership</span>
+  <h1 class="a-title">A Learning Mindset - Your key to Transformational Leadership</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Jul 15, 2025</span><span class="dot"></span><span>4 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_2f1ebd93f47e460b90d17c101476ca1e~mv2.png/v1/fill/w_1000,h_571,al_c,q_90,usm_0.66_1.00_0.01/e37051_2f1ebd93f47e460b90d17c101476ca1e~mv2.png" alt="A Learning Mindset - Your key to Transformational Leadership" loading="lazy"></div>
+  <div class="article-body">
+<p>Updated: Jul 29, 2025</p>
+<p>The concept of a learning mindset is crucial for transforming entire organizations. I have personally seen the remarkable impact a learning mindset can have on teams and performance. It promotes humility, fosters servant leadership, and inspires innovation and open dialogue.</p>
+<p>A "learning mindset" might sound simple, but it's a powerful commitment to understanding and engaging with our surroundings. When leaders embrace this mindset, they cultivate an environment ripe for growth and development.</p>
+<h2>The Importance of Humility in Leadership</h2>
+<p>Humility is an essential but oft overlooked trait in leadership. While confidence is crucial, it can easily tip into arrogance if not balanced with humility. A humble leader recognizes they do not have all the answers and is open to feedback.</p>
+<p>This type of humility encourages a culture where team members feel valued and heard. For example, a company that regularly solicits feedback and acts on it can see a significant increase in employee engagement—up to 70% in some cases, according to Gallup. When team members see their contributions acknowledged, they become more likely to engage creatively and actively in their roles.</p>
+<p>Leaders with a learning mindset are willing to step back, reevaluate their biases, and make room for new, innovative insights that can move their businesses forward.</p>
+<h2>Exploring Customer Needs with a Growth Perspective</h2>
+<p>Understanding customer needs is vital for operational excellence. Leaders who feel they already know their customers can miss key insights that enhance products and services.</p>
+<p>By adopting a learning mindset, leaders can dive deeper into customer interactions, asking questions that uncover pain points. For instance, a study by McKinsey found that companies that actively engage with their customers to understand their needs can increase customer satisfaction by up to 30%. This approach not only improves service but also builds long-term, trust-based relationships.</p>
+<p>Instead of assuming they understand customer preferences, leaders should treat every customer interaction as a learning opportunity. This shift in perspective not only drives innovation but also fuels business growth.</p>
+<h2>The Power of Iteration in Service and Process Improvement</h2>
+<p>A learning mindset encourages leaders to embrace iteration in process improvement. Many organizations stick to processes that have become outdated. A leader committed to learning is willing to experiment with new ideas, measure effectiveness, and adjust strategies accordingly.</p>
+<p>For example, companies that successfully implement Lean and Six Sigma methodologies often report efficiency improvements of 20% or more. When a team member proposes a new process improvement, see it as a chance to learn. Create an environment where feedback is welcomed and experimentation is encouraged. This iterative approach allows for continuous refinement, ensuring that business processes evolve to meet current demands effectively.</p>
+<h2>Servant Leadership – Putting People First</h2>
+<p>Servant leadership aligns closely with the learning mindset. Leaders who adopt this approach prioritize the growth and well-being of their team members. This focus on serving others rather than wielding authority leads to a culture of collaboration and empowerment.</p>
+<p>A learning mindset equips servant leaders to listen actively to their teams' needs. Research has shown that organizations with a strong culture of employee support report higher retention rates than their peers. When team members feel valued and supported, the entire organization benefits, as employees are more inclined to contribute to its success.</p>
+<p>Leaders need to understand that their role extends beyond simply driving results; it's also about nurturing talent. This balance is a hallmark of transformational leadership.</p>
+<h2>Fostering Open Dialog and Collaboration</h2>
+<p>To foster innovation, leaders must cultivate an environment where open dialogue is encouraged. When leaders model a learning mindset, they demonstrate that all contributions matter. This openness can lead to groundbreaking ideas that significantly enhance operational excellence.</p>
+<p>Team brainstorming sessions should be platforms for collective learning rather than simple information exchanges. When leaders approach discussions from a place of curiosity and humility, it encourages team members to share insights without fear of judgment.</p>
+<p>Commit to making every conversation a chance for innovation. Foster a culture of trust, reduce silos, and encourage collaboration across departments. When leaders create safe spaces for dialogue, every conversation can generate new ideas and solutions.</p>
+<h2>Driving Success through a Learning Mindset</h2>
+<p>A learning mindset is more than a personal trait; it's a cornerstone of effective leadership in today's business landscape. By embracing humility, championing servant leadership, and encouraging open dialogue, leaders can unlock transformational potential within their teams.</p>
+<p>Organizations that prioritize continuous learning not only stay ahead of the curve, but they also stimulate innovation and create sustained success. The path to operational excellence begins with the understanding that genuine leaders are lifelong learners.</p>
+<p>Embrace the lessons that come from every challenge and interaction. Adopting a learning mindset will not only transform your leadership approach but will also empower your organization to exceed its goals and aspirations.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

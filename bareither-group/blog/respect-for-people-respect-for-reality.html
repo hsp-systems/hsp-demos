@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respect for People = Respect for Reality | Bareither Group Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0F2B5B;--navy-mid:#1A3D7A;--teal:#1B7A8A;--teal-light:#2499AD;--white:#FFFFFF;--off-white:#F7F6F3;--cream:#EEE9DF;--text:#1A1A1A;--text-mid:#4A4A4A;--text-muted:#7A7A7A;--border:#DDD9D2}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wm-badge{font-family:'Libre Baskerville',serif;font-weight:700;font-size:15px;color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:5px 9px;line-height:1}
+.wm-name{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-right a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none}
+.nav-right a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-mid)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:40px 24px 20px}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;margin-bottom:26px}
+.back:hover{color:var(--navy)}
+.a-cat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.a-title{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4.4vw,44px);font-weight:700;color:var(--navy);line-height:1.18;margin-bottom:18px}
+.a-meta{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--text-muted);margin-bottom:30px}
+.a-meta .who{color:var(--navy);font-weight:600}
+.a-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.a-hero{width:100%;border-radius:8px;overflow:hidden;margin-bottom:38px;background:var(--navy)}
+.a-hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.article-body{font-size:17px;color:#22272e;line-height:1.78}
+.article-body p{margin:0 0 22px}
+.article-body h2{font-family:'Libre Baskerville',serif;font-size:25px;color:var(--navy);line-height:1.25;margin:38px 0 14px}
+.article-body h3{font-family:'Libre Baskerville',serif;font-size:20px;color:var(--navy);margin:30px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 22px;padding-left:24px}
+.article-body li{margin-bottom:9px}
+.article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.article-body strong{color:var(--navy)}
+.article-body blockquote{border-left:3px solid var(--teal);background:var(--off-white);margin:0 0 22px;padding:16px 22px;font-style:italic;color:var(--text-mid)}
+.article-body img{max-width:100%;height:auto;border-radius:6px;margin:8px 0 22px}
+.a-foot{max-width:760px;margin:30px auto 0;padding:0 24px}
+.a-rule{border:0;border-top:1px solid var(--border);margin:0 0 22px}
+.a-sign{font-size:14px;color:var(--text-muted)}
+.a-sign b{color:var(--navy)}
+/* cta */
+.cta-strip{background:var(--navy);margin-top:60px;padding:64px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
+.cta-in{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.cta-in h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-in h2 em{font-style:italic;color:var(--teal-light)}
+.cta-in p{font-size:15px;font-weight:300;color:rgba(255,255,255,0.72);margin-bottom:26px;line-height:1.7}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:4px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+/* footer */
+footer{background:#0b2049;padding:40px 24px;text-align:center}
+.f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none}
+.f-links a:hover{color:#fff}
+.f-copy{font-size:12px;color:rgba(255,255,255,0.32)}
+@media(max-width:680px){
+  nav{padding:0 18px}
+  .nav-right a:not(.nav-cta){display:none}
+  .wm-name{display:none}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="wordmark"><span class="wm-badge">BGC</span><span class="wm-name">Bareither Group Consulting</span></a>
+  <div class="nav-right">
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html" class="nav-cta">Free Assessment</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../blog.html" class="back">&larr; All Posts</a>
+  <span class="a-cat">Culture</span>
+  <h1 class="a-title">Respect for People = Respect for Reality</h1>
+  <div class="a-meta"><span class="who">Chad Bareither</span><span class="dot"></span><span>Nov 17, 2025</span><span class="dot"></span><span>5 min read</span></div>
+  <div class="a-hero"><img src="https://static.wixstatic.com/media/e37051_c847abc3ffac4a1f8ab4197d8b7cb812~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01/e37051_c847abc3ffac4a1f8ab4197d8b7cb812~mv2.jpg" alt="Respect for People = Respect for Reality" loading="lazy"></div>
+  <div class="article-body">
+<p>In <em>Improve LESS</em>, I define a problem very simply: any time actual results don’t match what you expected. The key is <em>how</em> you respond. When leaders blame people, they shut down learning. When they focus on the process and “go see” the work, they show respect and unlock improvement.</p>
+<p>A few core ideas:</p>
+<ul>
+<li><strong>Value is created at the frontline.</strong>The people closest to the work have the most contact with your product, your customers, and your systems. They see what’s really happening long before it shows up in a KPI.</li>
+<li><strong>Reports are rear-view mirrors.</strong>Dashboards and decks are lagging indicators. By the time a metric turns red, your people have probably been living with the underlying issue for weeks.</li>
+<li><strong>“Go see” is an act of respect.</strong>Leaving the conference room to observe the work (Gemba) is not micromanagement; it’s leadership. It says, “Your reality matters enough for me to come to you.”</li>
+</ul>
+<p>Daily management, in the system I teach, is built exactly on this idea: teams review what they <em>expected</em> to happen vs. what <em>actually</em> happened, and leaders engage with them at the process, not from a distance.</p>
+<h2>Conference-Room decisions are not always right</h2>
+<p>When decisions are made mostly from reports:</p>
+<ul>
+<li>You see - <strong>averages</strong>, not variation and workarounds.</li>
+<li>You hear - <strong>summaries</strong>, not the small frustrations that erode safety, quality, and morale.</li>
+<li>You reinforce a - <strong>blame culture</strong>(“who missed their number?”) instead of a- <strong>learning culture</strong>(“what in the process made this result likely?”).</li>
+</ul>
+<p>The result?People stop raising problems. They cope, patch, and work around. That’s the opposite of respect.</p>
+<p>Respect for people means:</p>
+<ul>
+<li>You don’t assume you have the full story. </li>
+<li>You don’t ask people to “try harder” inside a broken system. </li>
+<li>You invest your time to understand and improve the system they’re working in. </li>
+</ul>
+<h2>Three Things You Can Do <em>This Week</em></h2>
+<p>(All in Under an Hour)</p>
+<p>You don’t need a full transformation to start behaving differently.</p>
+<p>Here are three simple moves—each about 20 minutes—that will tangibly show respect for people <em>and</em> give you better information than any report.</p>
+<h3>1. The 20-Minute Gemba "Listening Walk"</h3>
+<p><strong>Purpose:</strong> Show up with curiosity, not judgment.</p>
+<p><strong>Time:</strong> ~20 minutes.</p>
+<p><strong>How to do it:</strong></p>
+<ul>
+<li><strong>Pick one area</strong>(a line, cell, or team) that’s important to your strategy or currently under pressure.</li>
+<li><strong>Tell the supervisor in advance</strong>: “I’m coming to listen and learn, not to inspect or blame.”</li>
+<li>When you arrive, ask 3 questions to a few people doing the work: - <em>“What’s making your job harder than it needs to be today?”</em></li>
+<li><em>“Where do you feel you’re fighting the process instead of flowing with it?”</em></li>
+<li>
+<p><em>“If you could change one small thing this week, what would it be?”</em></p>
+</li>
+<li>
+<p><strong>Don’t fix in the moment.</strong>Just listen, clarify, and write down what you hear.</p>
+</li>
+<li>Close with: - <em>“Thank you. I’m going to review what I heard and come back to you by [day] so we can act on it together.”</em></li>
+</ul>
+<p>Why this shows respect:</p>
+<ul>
+<li>You’re choosing their reality over your assumptions. </li>
+<li>You’re treating their pain points as legitimate data, not complaints. </li>
+<li>You’re reinforcing that problems are - <em>process</em>issues to be surfaced, not personal failures.</li>
+</ul>
+<h3>2. The 20-Minute “Metric Reality Check”</h3>
+<p><strong>Purpose:</strong> Connect one KPI directly to the work and the people behind it.</p>
+<p><strong>Time:</strong> ~20 minutes.</p>
+<p><strong>How to do it:</strong></p>
+<ul>
+<li><strong>Pick one metric</strong>from your performance board—ideally one that’s red or barely green (safety, quality, delivery, cost, or morale).</li>
+<li>Ask yourself: - <em>“Where, physically, does this number get created?”</em>- Which process? </li>
+<li>
+<p>Which team or station? </p>
+</li>
+<li>
+<p>Go to that spot and say something like: - <em>“This chart shows we missed our response time target yesterday. I’d like to see how the work actually happens and understand what got in your way.”</em></p>
+</li>
+<li>
+<p>Watch the process for a few cycles. Ask: - <em>“Does this chart feel accurate to you?”</em></p>
+</li>
+<li><em>“What there anything different about yesterday?”</em></li>
+<li>
+<p><em>“What do these numbers not show that I should know?”</em></p>
+</li>
+<li>
+<p>Before leaving, summarize what you heard: - <em>“So, the real drivers are [X, Y, Z], and the report doesn’t fully capture [A]. That’s helpful—I’ll make sure we reflect that when we talk about this metric.”</em></p>
+</li>
+</ul>
+<p>Why this shows respect:</p>
+<ul>
+<li>You’re not weaponizing metrics; you’re using them as a starting point for shared understanding. </li>
+<li>You’re validating lived experience over “clean” data. </li>
+<li>You’re modeling that “red” is a signal to learn, not a reason to blame. </li>
+</ul>
+<h3>3. The 20-Minute “Remove One Pebble” Commitment</h3>
+<p><strong>Purpose:</strong> Turn listening into visible action—fast.</p>
+<p><strong>Time:</strong> ~20 minutes to kick off; (maybe 2 hours to implement later).</p>
+<p><strong>How to do it:</strong></p>
+<ul>
+<li>
+<p>In a huddle or team meeting, say: - <em>“I want to remove one small, daily frustration from your work this week—something that wastes time, creates rework, or just annoys you.”</em></p>
+</li>
+<li>
+<p>Ask each person to quietly jot down a “pebble in their shoe”: - A form that always prints wrong </p>
+</li>
+<li>A tool that’s never where it should be </li>
+<li>A screen that times out too fast </li>
+<li>
+<p>A step that forces double-entry </p>
+</li>
+<li>
+<p>Collect the ideas, group the quick wins, and - <strong>pick one you can fix within 48 hours</strong>.</p>
+</li>
+<li>Tell the team: - <em>“How about we fix this one first. Once it’s done, we’ll pick another.”</em></li>
+<li>
+<p><em>"When should we start?"</em></p>
+</li>
+<li>
+<p>Follow through—and when you do, explicitly connect it back: - <em>“You told me this was slowing you down. We changed it because your time and frustration matter.”</em></p>
+</li>
+</ul>
+<p>Why this shows respect:</p>
+<ul>
+<li>You’re proving that speaking up leads to change, not eye rolls. </li>
+<li>You’re using your authority to improve the system, not just demand more effort. </li>
+<li>You’re building the muscle of small, fast improvements instead of giant, slow “initiatives.” </li>
+</ul>
+<h2>Respect for people is not soft. It’s operational.</h2>
+<p>When you:</p>
+<ul>
+<li>Leave the conference room and go see the work, </li>
+<li>Treat metrics as clues, not verdicts, </li>
+<li>And use your position to remove barriers instead of add pressure, </li>
+</ul>
+<p>you get:</p>
+<ul>
+<li>Better information than any report can provide, </li>
+<li>More engaged problem-solvers at the frontline, </li>
+<li>And a culture where issues surface early—while they’re still small. </li>
+</ul>
+<p>You don’t have to overhaul your whole system to start. You just have to change how you show up this week.</p>
+<p>Do one listening walk.</p>
+<p>Do one metric reality check.</p>
+<p>Remove one pebble.</p>
+<p>That’s how you improve LESS … and get better results.</p>
+  </div>
+</article>
+
+<div class="a-foot">
+  <hr class="a-rule">
+  <p class="a-sign">Written by <b>Chad Bareither</b>, Founder of Bareither Group Consulting.</p>
+</div>
+
+<section class="cta-strip">
+  <div class="cta-grid"></div>
+  <div class="cta-in">
+    <h2>Curious where your <em>operation</em> stands?</h2>
+    <p>Take the free 4-step operational assessment and see your single highest-leverage opportunity in about two minutes.</p>
+    <a href="../assessment.html" class="btn-white">Take the Free Assessment &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../about.html">About Chad</a>
+    <a href="../download.html">Improve LESS</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../assessment.html">Free Assessment</a>
+  </div>
+  <p class="f-copy">&#169; 2026 Bareither Group Consulting LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
