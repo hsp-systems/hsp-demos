@@ -145,6 +145,21 @@
 .flinks a{font-size:13px;color:rgba(255,255,255,0.52);text-decoration:none;transition:color 0.2s}
 .flinks a:hover{color:var(--white)}
 .fcopy{font-size:12px;color:rgba(255,255,255,0.26)}
+/* ── real post images ── */
+.feat-img.real{background-size:cover;background-position:center}
+.feat-img.real::after{background:linear-gradient(160deg,rgba(15,43,91,0.10),rgba(15,43,91,0.32))}
+.bpost-img.real{background:var(--navy) center/cover no-repeat}
+.bpost-img.real::after{background:linear-gradient(160deg,rgba(15,43,91,0.04),rgba(15,43,91,0.16))}
+/* ── archive list ── */
+.archive-sec{background:var(--white);padding:78px 0 92px}
+.arch-year{font-family:'Libre Baskerville',serif;font-size:22px;color:var(--navy);font-weight:700;margin:40px 0 4px;padding-bottom:10px;border-bottom:2px solid var(--cream)}
+.arch-year:first-of-type{margin-top:6px}
+.arch-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:15px 6px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:padding-left .18s ease,background .18s ease}
+.arch-row:hover{padding-left:14px;background:var(--off-white)}
+.arch-title{font-size:15px;font-weight:500;color:var(--text);line-height:1.4}
+.arch-row:hover .arch-title{color:var(--teal)}
+.arch-date{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--text-muted);white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){.arch-row{flex-direction:column;gap:3px}.arch-date{font-size:11px}}
   </style>
 </head>
 <body>
@@ -173,21 +188,19 @@
 <section class="featured-sec">
   <div class="wrap">
     <p class="sec-label fade-up">Featured Post</p>
-    <a class="featured-card fade-up" href="https://www.bareithergroup.com/blog" target="_blank">
-      <div class="feat-img">
-        <span class="feat-img-label">Cost &amp; Margin</span>
+    <a class="featured-card fade-up" href="https://www.bareithergroup.com/post/automation-won-t-save-a-chaotic-system" target="_blank">
+      <div class="feat-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_51d1b06640e94c829c3d3f11a0b98f63~mv2.jpg')">
+        <span class="feat-img-label">Latest</span>
       </div>
       <div class="feat-body">
         <span class="feat-cat">Operations Strategy</span>
-        <h2 class="feat-title">Why Manufacturers Scale Volume But Lose Margin</h2>
-        <p class="feat-excerpt">You add lines, hire operators, win new contracts. Then the P&amp;L comes back worse than before. Scaling manufacturing is supposed to create leverage — but most plants scale their complexity as fast as they scale their volume. The result is more revenue with thinner margins and more people running harder just to stay even. The problem isn't growth. It's that growth without constraint management is just bigger overhead.</p>
+        <h2 class="feat-title">Automation Won't Save a Chaotic System</h2>
+        <p class="feat-excerpt">Before you automate, stabilize. Bolting technology onto a chaotic process just makes the chaos run faster — automation amplifies whatever system it's dropped into, for better or worse. The work that makes automation actually pay off has to come first.</p>
         <span class="read-more">Read Article &rarr;</span>
         <div class="feat-meta">
-          <span>Scott Bareither</span>
+          <span>Chad Bareither</span>
           <span class="feat-meta-dot"></span>
           <span>June 2026</span>
-          <span class="feat-meta-dot"></span>
-          <span>6 min read</span>
         </div>
       </div>
     </a>
@@ -196,66 +209,165 @@
 
 <section class="posts-sec">
   <div class="wrap">
-    <p class="sec-label fade-up">All Posts</p>
+    <p class="sec-label fade-up">Recent Posts</p>
     <div class="posts-grid">
 
-      <a class="bpost fade-up" href="https://www.bareithergroup.com/blog" target="_blank">
-        <div class="bpost-img c1"></div>
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/the-devil-we-know-a-practical-starting-line-for-operational-excellence" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_87d0f8816ef6460ca6193977a5af295c~mv2.png')"></div>
         <div class="bpost-body">
-          <span class="bpost-cat">Process Improvement</span>
-          <h3 class="bpost-title">The One Constraint Your Operation Hasn't Named Yet</h3>
-          <p class="bpost-excerpt">Every plant I walk into has fifteen to twenty improvement initiatives in flight. They're all legitimate. Most will never move the needle. The Focus &amp; Align Framework starts with a single uncomfortable question: which one constraint, if resolved, would make everything else easier?</p>
-          <div class="bpost-meta">
-            <span>Scott Bareither</span>
-            <span class="bpost-meta-dot"></span>
-            <span>4 min read</span>
-          </div>
+          <span class="bpost-cat">Operational Excellence</span>
+          <h3 class="bpost-title">The Devil We Know: A Practical Starting Line for Operational Excellence</h3>
+          <p class="bpost-excerpt">You don't need a consultant to tell you where it hurts. Leaders already feel the operational pain — the practical starting line is naming the devil you know and going after it.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>May 2026</span></div>
         </div>
       </a>
 
-      <a class="bpost fade-up" href="https://www.bareithergroup.com/blog" target="_blank">
-        <div class="bpost-img c2"></div>
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/embracing-springtime-appreciating-the-quiet-work-of-renewal" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_f00b3bf2328b488e8f06b0236e1fb504~mv2.jpg')"></div>
         <div class="bpost-body">
-          <span class="bpost-cat">Capability &amp; Culture</span>
-          <h3 class="bpost-title">Tribal Knowledge Is a Business Risk. Here's How to Fix It.</h3>
-          <p class="bpost-excerpt">Your best operator retires. Your shift supervisor leaves for a competitor. Suddenly the line that ran fine for three years starts producing inconsistent results. Tribal knowledge feels like an asset right up until the day it walks out the door.</p>
-          <div class="bpost-meta">
-            <span>Scott Bareither</span>
-            <span class="bpost-meta-dot"></span>
-            <span>5 min read</span>
-          </div>
+          <span class="bpost-cat">Leadership</span>
+          <h3 class="bpost-title">Embracing Springtime: Appreciating the Quiet Work of Renewal</h3>
+          <p class="bpost-excerpt">Real transformation rarely announces itself. Like spring, the meaningful work of renewal happens quietly, beneath the surface, long before the results show.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>April 2026</span></div>
         </div>
       </a>
 
-      <a class="bpost fade-up" href="https://www.bareithergroup.com/blog" target="_blank">
-        <div class="bpost-img c3"></div>
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/choosing-the-right-problems-to-solve-for-lasting-results" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_e72fdbf51ca74e09bdd8553b09b36299~mv2.png')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Problem Solving</span>
+          <h3 class="bpost-title">Choosing the Right Problems to Solve for Lasting Results</h3>
+          <p class="bpost-excerpt">A problem-solving team without strategic direction just gets very good at solving the wrong things. Picking the right problems is what turns effort into lasting results.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>March 2026</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/nearshoring-is-an-opportunity-for-predictable-lead-times" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_38aa8e0d6b4a470d817da8f4aa9162b2~mv2.png')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Supply Chain</span>
+          <h3 class="bpost-title">Nearshoring Is an Opportunity… For Predictable Lead Times</h3>
+          <p class="bpost-excerpt">Chasing the lowest component price often costs more than it saves. Predictable, shorter lead times cut inventory and free up cash — the real nearshoring opportunity.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>February 2026</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/most-goals-aren-t-goals-they-re-guesses" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_b14481d8d6d54d33a223d6c927bafd18~mv2.jpg')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Strategy Deployment</span>
+          <h3 class="bpost-title">Most "Goals" Aren't Goals — They're Guesses</h3>
+          <p class="bpost-excerpt">Most "goals" are guesses dressed up as targets. Without verified data from the floor, even well-meaning goals quietly decay into firefighting.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>January 2026</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/stop-stacking-initiatives-install-stability-before-the-next-change" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_2ffe39f5b8034e578e20f9096b677f74~mv2.jpg')"></div>
         <div class="bpost-body">
           <span class="bpost-cat">Daily Management</span>
-          <h3 class="bpost-title">Why Process Improvement Stalls in Year Two</h3>
-          <p class="bpost-excerpt">The project worked. Scrap dropped 40%. Lead time cut by two weeks. You celebrated, trained the team, and moved on. Six months later the numbers are drifting back. This isn't a people problem — it's a systems problem. Gains require a Daily Management structure to hold them.</p>
-          <div class="bpost-meta">
-            <span>Scott Bareither</span>
-            <span class="bpost-meta-dot"></span>
-            <span>5 min read</span>
-          </div>
+          <h3 class="bpost-title">Stop Stacking Initiatives: Install Stability Before the Next Change</h3>
+          <p class="bpost-excerpt">The instinct to launch the next initiative is strong. But stacking change on an unstable base guarantees backslide — install stability first, then build.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>December 2025</span></div>
         </div>
       </a>
 
-      <a class="bpost fade-up" href="https://www.bareithergroup.com/blog" target="_blank">
-        <div class="bpost-img c4"></div>
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/respect-for-people-respect-for-reality" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_c847abc3ffac4a1f8ab4197d8b7cb812~mv2.jpg')"></div>
         <div class="bpost-body">
-          <span class="bpost-cat">Case Study</span>
-          <h3 class="bpost-title">53% Lead Time Reduction in Two Weeks: A Medical Device Manufacturer</h3>
-          <p class="bpost-excerpt">On-time delivery had slipped to 62%. The team was working overtime every week and still falling behind. By isolating the throughput constraint and tightening flow in a single cell, they cut lead time by 53% in fourteen days — without adding headcount or capital.</p>
-          <div class="bpost-meta">
-            <span>Scott Bareither</span>
-            <span class="bpost-meta-dot"></span>
-            <span>7 min read</span>
-          </div>
+          <span class="bpost-cat">Culture</span>
+          <h3 class="bpost-title">Respect for People = Respect for Reality</h3>
+          <p class="bpost-excerpt">Respect for people means respect for reality. The fastest path to improvement is treating what the front line actually sees as the truth worth acting on.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>November 2025</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/focus-creates-flow-how-to-pick-the-critical-few-in-manufacturing" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_4eeb83972f47417a8681e09420871cb0~mv2.png')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Process Improvement</span>
+          <h3 class="bpost-title">Focus Creates Flow: How to Pick the Critical Few in Manufacturing</h3>
+          <p class="bpost-excerpt">Trying to improve everything improves nothing. Picking the critical few priorities is what frees your team from firefighting and creates real flow.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>October 2025</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/solution-system-culture" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_2a144629f73748a886ddd0d9b8f7ad2c~mv2.jpg')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Continuous Improvement</span>
+          <h3 class="bpost-title">Solution &lt; System &lt; Culture</h3>
+          <p class="bpost-excerpt">A clever solution fades. A system holds it. A culture makes it inevitable. Operational excellence is the climb from one to the next.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>September 2025</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/safety-mindset-and-it-s-impacts-on-operational-excellence" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_76fa3423d8f54c04b824f0c518e76dac~mv2.png')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Safety &amp; OpEx</span>
+          <h3 class="bpost-title">Safety Mindset and Its Impact on Operational Excellence</h3>
+          <p class="bpost-excerpt">Safety isn't a separate program — it's a window into operational discipline. The same habits that keep people safe drive continuous improvement everywhere.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>August 2025</span></div>
+        </div>
+      </a>
+
+      <a class="bpost fade-up" href="https://www.bareithergroup.com/post/a-learning-mindset-your-key-to-transformational-leaderhip" target="_blank">
+        <div class="bpost-img real" style="background-image:url('https://static.wixstatic.com/media/e37051_2f1ebd93f47e460b90d17c101476ca1e~mv2.png')"></div>
+        <div class="bpost-body">
+          <span class="bpost-cat">Leadership</span>
+          <h3 class="bpost-title">A Learning Mindset — Your Key to Transformational Leadership</h3>
+          <p class="bpost-excerpt">Transformational leaders aren't the ones with all the answers. They're the ones who build a learning organization that out-adapts the problem.</p>
+          <div class="bpost-meta"><span>Chad Bareither</span><span class="bpost-meta-dot"></span><span>July 2025</span></div>
         </div>
       </a>
 
     </div>
+  </div>
+</section>
+
+<section class="archive-sec">
+  <div class="wrap">
+    <p class="sec-label fade-up">The Archive — every post, back to 2022</p>
+
+    <div class="arch-year">2025</div>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/recognizing-trends-giving-your-team-the-keys-to-operational-excellence" target="_blank"><span class="arch-title">Recognizing Trends: Giving Your Team the Keys to Operational Excellence</span><span class="arch-date">Jun 2025</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/don-t-standardize-yet" target="_blank"><span class="arch-title">Don't Standardize… Yet</span><span class="arch-date">May 2025</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/responsible-or-accountable" target="_blank"><span class="arch-title">"Responsible" or "Accountable"?</span><span class="arch-date">Apr 2025</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/back-to-basics-the-overlooked-power-of-mastering-fundamentals-in-lean-management" target="_blank"><span class="arch-title">Back to Basics: The Overlooked Power of Mastering Fundamentals in Lean Management</span><span class="arch-date">Mar 2025</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/the-journey-to-unveiling-manufacturing-operations-for-true-transformation" target="_blank"><span class="arch-title">The Journey to Unveiling Manufacturing Operations for True Transformation</span><span class="arch-date">Feb 2025</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/make-your-manufacturing-flow-with-strategic-buffers" target="_blank"><span class="arch-title">Make Your Manufacturing Flow with Strategic Buffers</span><span class="arch-date">Jan 2025</span></a>
+
+    <div class="arch-year">2024</div>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/improveless-using-a-90-day-plan-to-pursue-strategy" target="_blank"><span class="arch-title">#ImproveLESS: Using a 90-Day Plan to Pursue Strategy</span><span class="arch-date">Dec 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/the-balance-between-analysis-and-bias-for-action-in-operations" target="_blank"><span class="arch-title">The Balance Between Analysis and Bias for Action in Operations</span><span class="arch-date">Nov 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/information-flow-how-daily-management-promotes-efficient-and-effective-decision-making" target="_blank"><span class="arch-title">Information Flow: How Daily Management Promotes Effective Decision-Making</span><span class="arch-date">Oct 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/cultivating-a-productive-business-culture" target="_blank"><span class="arch-title">Cultivating a Productive Business Culture</span><span class="arch-date">Sep 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/daily-management-is-information-flow" target="_blank"><span class="arch-title">Daily Management Is Information Flow</span><span class="arch-date">Aug 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/the-value-of-small-steps" target="_blank"><span class="arch-title">The Value of Small Steps</span><span class="arch-date">Jul 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/to-be-or-not-to-be-productive" target="_blank"><span class="arch-title">To Be or Not To Be… Productive</span><span class="arch-date">Jun 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/what-is-your-culture-eating-for-breakfast" target="_blank"><span class="arch-title">What Is Your Culture Eating for Breakfast?</span><span class="arch-date">May 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/willingness-to-sell" target="_blank"><span class="arch-title">Willingness to Sell</span><span class="arch-date">Apr 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/building-organizational-resilience" target="_blank"><span class="arch-title">Building Organizational Resilience</span><span class="arch-date">Mar 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/process-process-process" target="_blank"><span class="arch-title">Process, Process, Process</span><span class="arch-date">Feb 2024</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/entropy-things-fall-apart-if-you-let-em-harlan-bareither" target="_blank"><span class="arch-title">Entropy: Things Fall Apart If You Let 'Em</span><span class="arch-date">Jan 2024</span></a>
+
+    <div class="arch-year">2023</div>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/your-business-plan-for-2024" target="_blank"><span class="arch-title">Your Business Plan for 2024</span><span class="arch-date">Dec 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/the-key-to-lasting-success" target="_blank"><span class="arch-title">The Key to Lasting Success</span><span class="arch-date">Nov 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/less-is-more" target="_blank"><span class="arch-title">Less Is More</span><span class="arch-date">Oct 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/unlocking-business-success-my-journey-on-the-yeukai-business-show" target="_blank"><span class="arch-title">Unlocking Business Success: My Journey on the Yeukai Business Show</span><span class="arch-date">Sep 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/what-is-a-business-system" target="_blank"><span class="arch-title">What Is a Business System?</span><span class="arch-date">Aug 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/good-systems-or-good-people-yes" target="_blank"><span class="arch-title">Good Systems or Good People? Yes.</span><span class="arch-date">Jul 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/soft-skill" target="_blank"><span class="arch-title">Soft Skill</span><span class="arch-date">Jul 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/so-how-do-we-improve" target="_blank"><span class="arch-title">So How Do We Improve?</span><span class="arch-date">Mar 2023</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/how-often-should-i-measure" target="_blank"><span class="arch-title">How Often Should I Measure?</span><span class="arch-date">Feb 2023</span></a>
+
+    <div class="arch-year">2022</div>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/is-all-inventory-waste" target="_blank"><span class="arch-title">Is All Inventory Waste?</span><span class="arch-date">Dec 2022</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/go-with-the-flow" target="_blank"><span class="arch-title">Go With the Flow</span><span class="arch-date">Nov 2022</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/what-s-your-process" target="_blank"><span class="arch-title">What's Your Process?</span><span class="arch-date">Oct 2022</span></a>
+    <a class="arch-row" href="https://www.bareithergroup.com/post/flavor-of-the-month" target="_blank"><span class="arch-title">Flavor of the Month</span><span class="arch-date">Sep 2022</span></a>
   </div>
 </section>
 
